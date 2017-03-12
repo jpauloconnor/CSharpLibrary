@@ -1,0 +1,11 @@
+﻿/*BRONZE CHALLENGE
+//Use the C# List type to make a string list of 10 phone numbers.
+ Make the numbers 317.555.0001 all the way up to 317.555.0010
+ Print the 10 numbers to the console by ITERATING over the list.
+
+SILVER CHALLENGE
+Let's pretend that Paul's phone number is 317.555.0005. Loop through the list and print that number with the message "Paul's phone number is 317.555.0005. Do the same with Gavin's number, except his ends with 0007.
+ 
+ GOLD CHALLENGE
+ . 
+ */
