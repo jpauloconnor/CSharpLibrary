@@ -1,0 +1,14 @@
+﻿/*
+BRONZE: 
+
+
+
+SILVER: 
+Using up to 4 different integers(a, b, c, d), show FOIL in the console. (x + y)(x - 7)
+Print out the answer. 
+
+GOLD: 
+Using 4 different integers(a, b, c, d), show four different operations to reach 100 or (e).  
+Print those operations to the console like this example: "The value of (a + b) * c / d is : 100"
+Resource: http://www.tutorialspoint.com/csharp/csharp_operators_precedence.htm
+*/

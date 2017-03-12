@@ -1,0 +1,18 @@
+﻿/**** CONDITIONALS ****/
+/*
+BRONZE CHALLENGE:
+    Create a conditional that prompts the user to enter a number from 1-5 to indicate how they're feeling.
+    Print a string to the console based on the number   that the user enters.
+    For instance, if a user enters a 5, you might print a response that says something like this: "Great to hear that you're feeling so good!"
+
+SILVER CHALLENGE:
+    Create a game using conditionals and the ReadLine property.	
+
+GOLD CHALLENGE: 
+    Asks users to enter their birthday. Set some conditionals based on age, sign, etc. 
+        Example: When is your birthday?
+                 > 08/11/1976
+                 Oh wow, you're a Leo. Did you know that Leo's love the new and extraordinary? 
+                 They despise dull, regular routines and if this is what they are faced with, they will simply create their own drama and excitement.
+
+*/
