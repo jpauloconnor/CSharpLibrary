@@ -7,7 +7,7 @@
     <ProjectGuid>{51B6564B-0B53-4D4E-B3AE-31961AD27F95}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._20_Try_Catch</RootNamespace>
-    <AssemblyName>_0._20_Try_Catch</AssemblyName>
+    <AssemblyName>0.20_Try_Catch</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Age.cs" />
+    <Compile Include="AgeException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

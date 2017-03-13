@@ -7,7 +7,7 @@
     <ProjectGuid>{2DC91082-F899-4331-A909-426EB564D1A9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._22_Enums</RootNamespace>
-    <AssemblyName>_0._22_Enums</AssemblyName>
+    <AssemblyName>0.22_Enums</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -7,7 +7,7 @@
     <ProjectGuid>{4CECA7FC-4016-44E2-8997-CD0B773897E6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._18_Interfaces</RootNamespace>
-    <AssemblyName>_0._18_Interfaces</AssemblyName>
+    <AssemblyName>0.18_Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPerson.cs" />
+    <Compile Include="IPerson2.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -7,7 +7,7 @@
     <ProjectGuid>{A0AD12B9-6D2A-4F62-9E4F-A0608D5B20A2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._19_Structs_Challenge</RootNamespace>
-    <AssemblyName>_0._19_Structs_Challenge</AssemblyName>
+    <AssemblyName>0.19_Structs_Challenge</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

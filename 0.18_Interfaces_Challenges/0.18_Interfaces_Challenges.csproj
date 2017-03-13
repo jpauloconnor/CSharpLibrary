@@ -7,7 +7,7 @@
     <ProjectGuid>{BE64256C-5801-4BC8-B36A-25FA58C25C32}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._18_Interfaces_Challenges</RootNamespace>
-    <AssemblyName>_0._18_Interfaces_Challenges</AssemblyName>
+    <AssemblyName>0.18_Interfaces_Challenges</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

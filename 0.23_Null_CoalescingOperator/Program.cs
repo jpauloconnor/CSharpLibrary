@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 //TODO: Still needs a little work with explanation. Maybe more examples.
 
 //EXPERIMENT: Try commenting out the null coalescing operator(section 2) and uncommenting the other code(section 1). How is the result different/similar?

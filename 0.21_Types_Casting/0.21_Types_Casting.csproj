@@ -7,7 +7,7 @@
     <ProjectGuid>{C511BE5C-D0E7-4932-A336-99A11B5FA724}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._21_Types_Casting</RootNamespace>
-    <AssemblyName>_0._21_Types_Casting</AssemblyName>
+    <AssemblyName>0.21_Types_Casting</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

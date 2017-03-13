@@ -7,7 +7,7 @@
     <ProjectGuid>{6FD965C0-1953-4B16-B2D1-5807DEBE9E3E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._11_Control_Flow_ForEach_Challenges</RootNamespace>
-    <AssemblyName>_0._11_Control_Flow_ForEach_Challenges</AssemblyName>
+    <AssemblyName>0.11_Control_Flow_ForEach_Challenges</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Challenges.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

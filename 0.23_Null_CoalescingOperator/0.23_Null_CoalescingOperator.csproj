@@ -7,7 +7,7 @@
     <ProjectGuid>{BB9D9725-B06B-4E92-86AD-A888A43BA111}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._23_Null_CoalescingOperator</RootNamespace>
-    <AssemblyName>_0._23_Null_CoalescingOperator</AssemblyName>
+    <AssemblyName>0.23_Null_CoalescingOperator</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

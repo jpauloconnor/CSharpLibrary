@@ -7,7 +7,7 @@
     <ProjectGuid>{8EE1418B-E313-412A-8FF5-5E8A39399F62}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._12_Collections_Arrays_Rectangular</RootNamespace>
-    <AssemblyName>_0._12_Collections_Arrays_Rectangular</AssemblyName>
+    <AssemblyName>0.12_Collections_Arrays_Rectangular</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

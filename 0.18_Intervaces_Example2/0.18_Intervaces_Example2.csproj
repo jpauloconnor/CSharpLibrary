@@ -7,7 +7,7 @@
     <ProjectGuid>{C266A4F2-1A28-489E-AFFA-5230055332D6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._18_Intervaces_Example2</RootNamespace>
-    <AssemblyName>_0._18_Intervaces_Example2</AssemblyName>
+    <AssemblyName>0.18_Intervaces_Example2</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -7,7 +7,7 @@
     <ProjectGuid>{B4F72D11-0852-4A99-B847-BC095B668194}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._19_Structs_Versus_Classes</RootNamespace>
-    <AssemblyName>_0._19_Structs_Versus_Classes</AssemblyName>
+    <AssemblyName>0.19_Structs_Versus_Classes</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
