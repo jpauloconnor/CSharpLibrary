@@ -10,6 +10,15 @@ namespace _0._06_Objects_Challenges
     {
         static void Main(string[] args)
         {
+            //TODO: Add stuff.
+            Hotel a23 = new Hotel();
+            a23.IsAvailable = true;
+            a23.RoomNumber = "a23";
+            a23.NumRooms = 3;
+
+            a23.PrintNumber();
+
+
         }
     }
 }

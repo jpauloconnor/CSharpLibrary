@@ -8,7 +8,7 @@ namespace _0._17_GettersSetters
 {
     class ElevenFiftyEmployee
     {
-        //Variables
+        //Fields
         private int _id;      //ID can't be negative
         private int _yearsExperience;  //An employee has some experience.
         private string _jobTitle;
