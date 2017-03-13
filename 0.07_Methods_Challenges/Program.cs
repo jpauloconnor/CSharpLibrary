@@ -32,6 +32,18 @@ namespace _0._07_Methods_Challenges
             thundercats.Genre = "Cartoon/Action";
             thundercats.shows();
 
+            List<NetflixShow> shows = new List<NetflixShow>
+                    {
+                        new NetflixShow(){ Name = "Peaky Blinders", Rating=4, Genre="Gangster" },
+                        new NetflixShow(){ Name = "Walking Dead", Rating=4, Genre="Horror" },
+                        new NetflixShow(){ Name = "Narcos", Rating=4, Genre="Gangster" }
+                    };
+
+            foreach (var show in shows)
+            {
+                Console.WriteLine(show.Name);
+            }
+
             Console.ReadLine();
         }
     }

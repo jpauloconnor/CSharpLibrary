@@ -11,6 +11,14 @@ namespace _0._08_Methods_Overloading
         static void Main(string[] args)
         {
             //TODO: Code
+
+            Player playerOne = new Player();
+            playerOne.Attack();
+            playerOne.Attack(5);
+            playerOne.Attack(500, "Laser");
+            Console.ReadLine();
+                
+             
         }
     }
 }

@@ -8,11 +8,11 @@ namespace _0._07_Methods
 {
     public class Car
     {
-        public bool automatic { get; set; }
-        public bool isFast { get; set; }
-        public string name { get; set; }
-        public bool isExpensive { get; set; }
-        public int price { get; set; }
+        public bool Automatic { get; set; }
+        public bool IsFast { get; set; }
+        public string Name { get; set; }
+        public bool IsExpensive { get; set; }
+        public int Price { get; set; }
         public bool IsPieceOfCrap { get; set; }
     }
 }
