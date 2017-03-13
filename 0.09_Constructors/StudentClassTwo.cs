@@ -8,5 +8,12 @@ namespace _0._09_Constructors
 {
     class StudentClassTwo
     {
+        //Constructor with no parameter
+        public StudentClassTwo()
+        {
+            name = "";
+        }
+
+        public string name = "";
     }
 }

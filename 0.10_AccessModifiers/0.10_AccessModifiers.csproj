@@ -7,7 +7,7 @@
     <ProjectGuid>{003E11A5-7375-446E-B4C5-2E727E55FA3D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._10_AccessModifiers</RootNamespace>
-    <AssemblyName>_0._10_AccessModifiers</AssemblyName>
+    <AssemblyName>0.10_AccessModifiers</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Car.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

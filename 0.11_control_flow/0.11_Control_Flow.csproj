@@ -7,7 +7,7 @@
     <ProjectGuid>{2A127EC9-EA02-4047-A845-AE624DBE1EA7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._11_control_flow</RootNamespace>
-    <AssemblyName>_0._11_control_flow</AssemblyName>
+    <AssemblyName>0.11_control_flow</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

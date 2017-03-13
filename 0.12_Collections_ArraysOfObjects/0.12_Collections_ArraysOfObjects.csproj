@@ -7,7 +7,7 @@
     <ProjectGuid>{0DF7503A-CD42-48DF-936B-2043A4EE5B9B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._12_Collections_ArraysOfObjects</RootNamespace>
-    <AssemblyName>_0._12_Collections_ArraysOfObjects</AssemblyName>
+    <AssemblyName>0.12_Collections_ArraysOfObjects</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Country.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

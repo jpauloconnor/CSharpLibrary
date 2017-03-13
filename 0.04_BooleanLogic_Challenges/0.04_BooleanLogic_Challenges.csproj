@@ -7,7 +7,7 @@
     <ProjectGuid>{4879B9C2-7A1F-4593-82AF-34585015EE44}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._04_BooleanLogic_Challenges</RootNamespace>
-    <AssemblyName>_0._04_BooleanLogic_Challenges</AssemblyName>
+    <AssemblyName>0.04_BooleanLogic_Challenges</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Challenge.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

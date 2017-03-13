@@ -10,6 +10,40 @@ namespace _0._07_Methods
     {
         static void Main(string[] args)
         {
+            Customer paul = new Customer();
+            paul.FirstName = "Paul";
+            paul.LastName = "O'Connor";
+            paul.AppearWealthy = false;
+            paul.PrintCustomer();
+
+            Car newCar = new Car();
+            newCar.automatic = true;
+            newCar.isFast = true;
+            newCar.name = "Pinto";
+            newCar.price = 9000;
+
+            Console.WriteLine("{0} owns a {1}, and it's in bad shape.", paul.FirstName, newCar.name);  //In bad shape could be a bool.
+            Console.WriteLine("I think it is worth about a ${0} bucks for a trade in.", newCar.price);
+
+
+            //A little bit of inheritance.
+            SportsCar sportsCar = new SportsCar();
+            sportsCar.madeInUSA = true;
+            sportsCar.name = "Corvette";
+
+
+            //NEEDS REFACTORING HERE VVVV
+
+            if (sportsCar.madeInUSA == true)
+            {
+                Console.WriteLine("He says he wouldn't mind owning a {0}, especially since they are made in the USA", sportsCar.name);
+            }
+            else
+            {
+                Console.WriteLine("He has no interest in owning a {0}, especially since it was not made in the USA", sportsCar.name);
+            }
+
+            Console.ReadLine();
         }
     }
 }

@@ -7,7 +7,7 @@
     <ProjectGuid>{F5674273-2A34-4DB1-8946-2AC88BFB6E92}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._13_Inheritance</RootNamespace>
-    <AssemblyName>_0._13_Inheritance</AssemblyName>
+    <AssemblyName>0.13_Inheritance</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
+    <Compile Include="Bear.cs" />
+    <Compile Include="Cat.cs" />
+    <Compile Include="PandaBear.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

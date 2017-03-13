@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _0._07_Methods
 {
-    public class SportsCar
+    public class SportsCar : Car
     {
         public bool madeInUSA { get; set; }
         public int cost { get; set; }

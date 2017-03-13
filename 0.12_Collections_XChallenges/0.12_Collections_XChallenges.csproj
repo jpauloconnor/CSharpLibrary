@@ -7,7 +7,7 @@
     <ProjectGuid>{6ACDA4FC-D4AA-407F-886B-701B1C0EC979}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._12_Collections_XChallenges</RootNamespace>
-    <AssemblyName>_0._12_Collections_XChallenges</AssemblyName>
+    <AssemblyName>0.12_Collections_XChallenges</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Challenges.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

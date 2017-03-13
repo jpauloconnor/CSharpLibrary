@@ -7,7 +7,7 @@
     <ProjectGuid>{560AB3D7-E383-4FCF-8D82-06ACE6A09A0A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._11_control_flow_challenges</RootNamespace>
-    <AssemblyName>_0._11_control_flow_challenges</AssemblyName>
+    <AssemblyName>0.11_control_flow_challenges</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

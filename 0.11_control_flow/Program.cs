@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//TODO - Just basic examples of each one we'll cover.
+//TODO - Just basic examples of each one we'll cover when we get to collections.
 
 namespace _0._11_control_flow
 {

@@ -7,7 +7,7 @@
     <ProjectGuid>{E90916AC-CB6B-4D95-B27E-579BAB5D953F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._04_BooleanLogic</RootNamespace>
-    <AssemblyName>_0._04_BooleanLogic</AssemblyName>
+    <AssemblyName>0.04_BooleanLogic</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

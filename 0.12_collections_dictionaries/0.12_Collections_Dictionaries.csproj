@@ -7,7 +7,7 @@
     <ProjectGuid>{44EC33A1-9FAB-4B21-B3D8-0CFE44011969}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._12_collections_dictionaries</RootNamespace>
-    <AssemblyName>_0._12_collections_dictionaries</AssemblyName>
+    <AssemblyName>0.12_collections_dictionaries</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

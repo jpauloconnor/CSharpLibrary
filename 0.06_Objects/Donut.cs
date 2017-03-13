@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _0._06_Objects
 {
-    public class Donuts
+    public class Donut
     {
         //NOTE: These would usually be private, but we're just demoing how to make an object.
         public string filling;

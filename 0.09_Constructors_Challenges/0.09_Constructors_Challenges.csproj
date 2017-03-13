@@ -7,7 +7,7 @@
     <ProjectGuid>{5905364F-EBE9-48D0-8024-6B124E16B16F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._09_Constructors_Challenges</RootNamespace>
-    <AssemblyName>_0._09_Constructors_Challenges</AssemblyName>
+    <AssemblyName>0.09_Constructors_Challenges</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MobilePhone.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Challenges.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

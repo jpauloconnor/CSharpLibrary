@@ -7,7 +7,7 @@
     <ProjectGuid>{3D94F6F3-9447-43E1-94FF-31B6DD4CDE8F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._02_BasicTypes_Challenges</RootNamespace>
-    <AssemblyName>_0._02_BasicTypes_Challenges</AssemblyName>
+    <AssemblyName>0.02_BasicTypes_Challenges</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

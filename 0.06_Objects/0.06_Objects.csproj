@@ -7,7 +7,7 @@
     <ProjectGuid>{3DF3B7F2-727A-4A12-987F-B370E714A526}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._06_Objects</RootNamespace>
-    <AssemblyName>_0._06_Objects</AssemblyName>
+    <AssemblyName>0.06_Objects</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Donut.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -7,7 +7,7 @@
     <ProjectGuid>{36376968-2833-4876-936C-643DFC639407}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._09_Constructors</RootNamespace>
-    <AssemblyName>_0._09_Constructors</AssemblyName>
+    <AssemblyName>0.09_Constructors</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,6 +44,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentClassThree.cs" />
+    <Compile Include="StudentClassTwo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

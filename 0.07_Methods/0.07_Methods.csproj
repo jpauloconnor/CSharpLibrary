@@ -7,7 +7,7 @@
     <ProjectGuid>{8D1AB848-A44B-4C26-BFA8-0DFFFD3D8406}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._07_Methods</RootNamespace>
-    <AssemblyName>_0._07_Methods</AssemblyName>
+    <AssemblyName>0.07_Methods</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Car.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SportsCar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

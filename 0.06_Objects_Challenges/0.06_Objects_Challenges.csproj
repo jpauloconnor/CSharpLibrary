@@ -7,7 +7,7 @@
     <ProjectGuid>{33D61C24-6D7C-4DED-9BC4-6DF8879E0A38}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._06_Objects_Challenges</RootNamespace>
-    <AssemblyName>_0._06_Objects_Challenges</AssemblyName>
+    <AssemblyName>0.06_Objects_Challenges</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

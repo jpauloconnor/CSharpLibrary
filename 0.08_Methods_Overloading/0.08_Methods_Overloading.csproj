@@ -7,7 +7,7 @@
     <ProjectGuid>{5F3234FD-063E-4561-A08E-0DE5EA4952AA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._08_Methods_Overloading</RootNamespace>
-    <AssemblyName>_0._08_Methods_Overloading</AssemblyName>
+    <AssemblyName>0.08_Methods_Overloading</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -7,7 +7,7 @@
     <ProjectGuid>{33424682-1CCB-41AB-891B-49CB5E162D9A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._03_Strings_Challenges</RootNamespace>
-    <AssemblyName>_0._03_Strings_Challenges</AssemblyName>
+    <AssemblyName>0.03_Strings_Challenges</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Challenge.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

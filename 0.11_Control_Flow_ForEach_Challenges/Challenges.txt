@@ -1,0 +1,20 @@
+﻿/*
+
+
+BRONZE: 
+	Use the ch type to print "Hello World" going vertically down the page.
+
+SILVER: 
+	Do the same thing in a single line.
+	
+GOLD: 
+	Print your name using an array built with chars. It's a type we haven't seen yet. 
+	Use Unicode or hexidecimal numbers to print your name.
+
+	Use the hexadecimal char array with a foreach loop to print your name going down the console. 
+
+
+char: https://msdn.microsoft.com/en-us/library/x9h8tsay.aspx
+foreach: https://msdn.microsoft.com/en-us/library/ttw7t8t6.aspx
+
+*/

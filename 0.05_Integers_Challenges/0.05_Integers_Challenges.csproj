@@ -7,7 +7,7 @@
     <ProjectGuid>{D62939BD-68AC-404E-80EE-CFDBB7673490}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._05_Integers_Challenges</RootNamespace>
-    <AssemblyName>_0._05_Integers_Challenges</AssemblyName>
+    <AssemblyName>0.05_Integers_Challenges</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Challenges.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
