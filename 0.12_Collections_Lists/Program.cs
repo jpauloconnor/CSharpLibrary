@@ -24,6 +24,8 @@ namespace _0._12_Collections_Lists
             conceptList.Add("Loops");
             conceptList.Add("Public versus Private");
             conceptList.Add("operators");
+
+
             conceptList.Add("Keywords");
             conceptList.Add("Loops");
             conceptList.Add("Conditionals");
@@ -48,13 +50,17 @@ namespace _0._12_Collections_Lists
             conceptList.Add("Structs");
             conceptList.Add("Switch Statements");
 
-            foreach (var item in conceptList)
+            foreach (var concept in conceptList)
             {
-                Console.WriteLine(item);
-
+                Console.WriteLine(concept);
             }
+            
+            Console.WriteLine(conceptList.Capacity);
+
 
             Console.ReadLine();
+
+
         }
     }
 }

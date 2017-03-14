@@ -55,11 +55,7 @@ How about creating a timeline of key battles from World War II?
             DateTime sBday = DateTime.Parse("10/12/1968");
             TimeSpan StepAge = DateTime.Now.Subtract(sBday);
             Console.WriteLine(StepAge.Days);
-
-            DateTime julieday = DateTime.Parse("09/02/1977");
-            TimeSpan julieAge = DateTime.Now.Subtract(julieday);
-            Console.WriteLine(julieAge.Days);
-
+          
             DateTime jennday = DateTime.Parse("02/26/1972");
             TimeSpan jennAge = DateTime.Now.Subtract(jennday);
             Console.WriteLine(jennAge.Days);
@@ -70,7 +66,6 @@ How about creating a timeline of key battles from World War II?
             System.Console.WriteLine("{0:dddd}", answer);
 
             Console.ReadLine();
-
 
             /***  TODO: GOLD ***/
         }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{79DD47B8-D32D-4F31-91BF-0158AA4C3DC5}</ProjectGuid>
+    <ProjectGuid>{9C24DCF9-C55D-4564-AEB9-A9C6EFED7E03}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_0._07_Methods_Challenges</RootNamespace>
-    <AssemblyName>0.07_Methods_Challenges</AssemblyName>
+    <RootNamespace>_0._04_Conditionals_Ternary</RootNamespace>
+    <AssemblyName>0.04_Conditionals_Ternary</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,15 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NetflixShow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Challenge.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

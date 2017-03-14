@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//TODO - Wriet challenge explanation for this and include a Gold challenge with Interfaces?
 namespace _0._07_Methods_Challenges
 {
     class Program

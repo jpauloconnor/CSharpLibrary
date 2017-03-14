@@ -10,7 +10,6 @@ namespace _0._04_BooleanLogic
     {
         static void Main(string[] args)
         {
-            //TODO: Ternary Operator, Switch
 
             bool isOn = true;
             bool isHot = false;

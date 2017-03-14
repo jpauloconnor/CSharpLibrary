@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{79DD47B8-D32D-4F31-91BF-0158AA4C3DC5}</ProjectGuid>
+    <ProjectGuid>{61C41B8E-6211-460B-A2BA-BFFDFA9D3C99}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_0._07_Methods_Challenges</RootNamespace>
-    <AssemblyName>0.07_Methods_Challenges</AssemblyName>
+    <RootNamespace>_0._26_OOP_DEMO</RootNamespace>
+    <AssemblyName>0.26_OOP_DEMO</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,15 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NetflixShow.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Challenge.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

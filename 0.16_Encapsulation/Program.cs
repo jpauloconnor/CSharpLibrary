@@ -34,16 +34,18 @@ namespace _0._16_Encapsulation
         {
             BankAccountPublic bankAccount = new BankAccountPublic();
             decimal amount = bankAccount.GetAmount();
-            Console.WriteLine(amount);
+            Console.WriteLine("Your balance is {0}", amount);
 
             BankAccountPrivate bankAccountPrivate = new BankAccountPrivate();
-            bankAccountPrivate.CustomerName = "Hey";
+            bankAccountPrivate.CustomerName = "John Paul Jones";
 
 
             BankAccountProtected bankAccountProtected = new BankAccountProtected();
             bankAccountProtected.CloseAccount();
             //Try calling any of the Protected methods on this. You can't do it.
+            
 
+            Console.ReadLine();
         }
     }
 }
