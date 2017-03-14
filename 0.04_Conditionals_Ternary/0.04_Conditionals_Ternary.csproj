@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5F3234FD-063E-4561-A08E-0DE5EA4952AA}</ProjectGuid>
+    <ProjectGuid>{9C24DCF9-C55D-4564-AEB9-A9C6EFED7E03}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_0._08_Methods_Overloading</RootNamespace>
-    <AssemblyName>0.08_Methods_Overloading</AssemblyName>
+    <RootNamespace>_0._04_Conditionals_Ternary</RootNamespace>
+    <AssemblyName>0.04_Conditionals_Ternary</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

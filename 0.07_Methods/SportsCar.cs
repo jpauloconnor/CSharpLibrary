@@ -8,7 +8,7 @@ namespace _0._07_Methods
 {
     public class SportsCar : Car
     {
-        public bool madeInUSA { get; set; }
-        public int cost { get; set; }
+        public bool MadeInUSA { get; set; }
+        public int Cost { get; set; }
     }
 }

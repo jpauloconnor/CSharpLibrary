@@ -1,0 +1,19 @@
+﻿BRONZE:
+Add a class called Hotel. Create three properties/variables:
+RoomNumber
+IsAvailable
+NumBeds
+Create an object and give each property a value.
+
+SILVER: 
+Create a method that prints out the RoomNumber to a guest.
+For instance, "You room number is C24".
+
+GOLD: 
+Create a method that checks the availability of a room and prints the following:
+
+"Yes (sir or mam) Room A23 is available." -> If it is available.
+"I'm sorry sir, that room is not available." -> If it is not available.
+
+
+

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//TODO - Wriet challenge explanation for this and include a Gold challenge with Interfaces?
 namespace _0._07_Methods_Challenges
 {
     class Program
@@ -31,6 +30,18 @@ namespace _0._07_Methods_Challenges
             thundercats.Rating = 4.0;
             thundercats.Genre = "Cartoon/Action";
             thundercats.shows();
+
+            List<NetflixShow> shows = new List<NetflixShow>
+                    {
+                        new NetflixShow(){ Name = "Peaky Blinders", Rating=4, Genre="Gangster" },
+                        new NetflixShow(){ Name = "Walking Dead", Rating=4, Genre="Horror" },
+                        new NetflixShow(){ Name = "Narcos", Rating=4, Genre="Gangster" }
+                    };
+
+            foreach (var show in shows)
+            {
+                Console.WriteLine(show.Name);
+            }
 
             Console.ReadLine();
         }

@@ -16,13 +16,12 @@ namespace _0._16_Encapsulation
 
         protected virtual void ApplyLateCharges()
         {
-            // deduct from account
+            Console.WriteLine("Apply Late Charges ran.");
         }
 
         protected virtual void CalculateInterest()
         {
-            // add to account
+            Console.WriteLine("Calculate Interest ran.");
         }
-
     }
 }

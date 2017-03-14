@@ -12,13 +12,13 @@ namespace _0._06_Objects
         {
             //Donut #1
             Donut special = new Donut();
-            special.filling = "Cream";
-            special.isSpecial = true;
-            Console.WriteLine(special.filling);
+            special.Filling = "Cream";
+            special.IsSpecial = true;
+            special.Price = 0.99M;
+            special.Type = "The Goliath Beast";
 
-            //Donut #2
-            Donut baconCovered = new Donut();
-
+            Console.WriteLine(special.Filling);
+            Console.ReadLine();
         }
     }
 }

@@ -8,12 +8,10 @@ namespace _0._06_Objects
 {
     public class Donut
     {
-        //NOTE: These would usually be private, but we're just demoing how to make an object.
-        public string filling;
-        public string type;
-        public decimal price;
-        public bool isSpecial;
-        //Have the students come up with some other ones.
-
+        //Properties. We'll talk about get; set; later.
+        public string Filling { get; set; }
+        public string Type { get; set; }
+        public decimal Price { get; set; }
+        public bool IsSpecial { get; set; }
     }
 }

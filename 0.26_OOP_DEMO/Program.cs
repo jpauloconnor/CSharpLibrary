@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/// <summary>
-/// Talk about Solution, Namespace, Class, Main
-/// </summary>
-namespace _0._01_Intro
+namespace _0._26_OOP_DEMO
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            Player john = new Player("John", "MadDog", Player.CharacterType.HorseMage);
+            Console.WriteLine(john.ToString());
+            Console.ReadLine();
         }
     }
 }

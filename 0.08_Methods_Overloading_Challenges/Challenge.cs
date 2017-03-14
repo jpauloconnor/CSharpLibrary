@@ -10,7 +10,7 @@ namespace _0._08_Methods_Overloading_Challenges
     class Challenge
     {
 
-
+        //TODO: Write this.
     }
 }
 
@@ -33,14 +33,7 @@ Reference: http://www.akadia.com/services/dotnet_polymorphism.html
 
 //OVERLOADING: This means that I can create multiple variations on the same function name. I just have to use different parameters for each one. Make sense?
 
-/// <summary>
-/// Uncomment the line to work with it.
-/// </summary>
 /*
-
-    namespace ClassesOverloading
-{
-
 public class Program
 {
 public static void Main()
