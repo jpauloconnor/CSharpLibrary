@@ -13,7 +13,7 @@ namespace _0._28_MathFacts
             for (int i = startNum - 1; i <= endNum; i++)
             {
                 if (i == startNum - 1)
-                    Console.Write(String.Format("{0,6}", "n"));
+                    Console.Write(String.Format("{0,6}|", "n"));
                 else
                     Console.Write(String.Format("{0,6}", i));
             }
@@ -22,7 +22,7 @@ namespace _0._28_MathFacts
 
             for (int i = 1; i <= 10; i++) //rows
             {
-                Console.Write(String.Format("{0,6}", i));
+                Console.Write(String.Format("{0,6}|", i));
                 for (int b = startNum; b <= endNum; b++)// collumns
                 {
                     string output = String.Format("{0,6}", i * b);
