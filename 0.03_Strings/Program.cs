@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _0._03_Strings
 {
@@ -20,7 +16,6 @@ namespace _0._03_Strings
             occupation = "Stuntman";
             string fullName = firstName + " " + lastName;
             Console.WriteLine(fullName);
-
 
             //String Interpolation
             Console.WriteLine("Name: {0}" + "\n" + "Occupation: {1}", fullName, occupation);

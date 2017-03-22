@@ -1,18 +1,23 @@
-﻿/**** CONDITIONALS ****/
-/*
-BRONZE CHALLENGE:
-    Create a conditional that prompts the user to enter a number from 1-5 to indicate how they're feeling.
-    Print a string to the console based on the number   that the user enters.
-    For instance, if a user enters a 5, you might print a response that says something like this: "Great to hear that you're feeling so good!"
+﻿BRONZE CHALLENGE:
+    Research the MSDN to learn about working with strings in C#. Composite formatting.
+    Create examples that show techniques for basic string manipulation. You'll need to show how to concatenate multiple strings,
+    use composite formating, show how to use escapes, and how to manipulate numbers(eg, dollars & commas).
+
+    Composite reference: https://msdn.microsoft.com/en-us/library/txafckwd(v=vs.110).aspx	
+    REFERENCE: https://msdn.microsoft.com/en-us/library/ms173104.aspx
 
 SILVER CHALLENGE:
-    Create a game using conditionals and the ReadLine property.	
+    Create a note to a potential employer that states your goals as a developer. Include the date in the string by 
+    creating a date string that is converted to a short date string. 
+    Here's an example: 	
+    "Dear Mr. Jones,
+    Today is 3/11/2016. I'm enjoying class, and I think I like C# the best. 
+    I'd like to get a job as a developer after I finish this course."
+
+    REFERENCE: https://msdn.microsoft.com/en-us/library/ms228504.aspx
 
 GOLD CHALLENGE: 
-    Asks users to enter their birthday. Set some conditionals based on age, sign, etc. 
-        Example: When is your birthday?
-                 > 08/11/1976
-                 Oh wow, you're a Leo. Did you know that Leo's love the new and extraordinary? 
-                 They despise dull, regular routines and if this is what they are faced with, they will simply create their own drama and excitement.
-
-*/
+    Create 2 strings: Your username in lower case, and your username in uppercase.
+    Write code that compares the two strings and prints whether or not they are equal.
+    Print one sentence that says that they are equal. Print another string that says taht they are not equal. 
+    REFERENCE https://msdn.microsoft.com/en-us/library/cc165449.aspx

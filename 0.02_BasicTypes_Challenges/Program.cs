@@ -13,11 +13,12 @@ namespace _0._02_BasicTypes_Challenges
             /* REFERENCE: https://msdn.microsoft.com/en-us/library/ms173104.aspx
           BRONZE CHALLENGE:
               Create a list of value types. (int, string, bool, float, double, decimal)
-              Create two examples for each type. One is a declaration only. The other is a declaration with initializer.
+              Create two examples for each type. One is a declaration only.
+              The other is a declaration with initializer.
               Print a view of the values in the console.
 
           SILVER CHALLENGE:
-              Use those types to concatenate a string. 
+              Use those types to concatenate a string. Any string will do.
 
           GOLD CHALLENGE: 
               Declare the year you were born as a string. 

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E90916AC-CB6B-4D95-B27E-579BAB5D953F}</ProjectGuid>
+    <ProjectGuid>{635A99AF-A189-42D8-A057-159E5C590B52}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_0._04_BooleanLogic</RootNamespace>
-    <AssemblyName>0.04_BooleanLogic</AssemblyName>
+    <RootNamespace>_0._04_Conditionals_if</RootNamespace>
+    <AssemblyName>0.04_Conditionals_if</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

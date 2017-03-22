@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("0.04_BooleanLogic")]
+[assembly: AssemblyTitle("0.04_Conditionals_if")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("0.04_BooleanLogic")]
+[assembly: AssemblyProduct("0.04_Conditionals_if")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e90916ac-cb6b-4d95-b27e-579bab5d953f")]
+[assembly: Guid("635a99af-a189-42d8-a057-159e5c590b52")]
 
 // Version information for an assembly consists of the following four values:
 //

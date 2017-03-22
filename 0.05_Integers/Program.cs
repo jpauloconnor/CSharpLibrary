@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _0._05_Integers
 {
@@ -10,9 +6,9 @@ namespace _0._05_Integers
     {
         static void Main(string[] args)
         {
-
+            
             // BASIC OPERATORS TO MEMORIZE NOW - Use these 90% of the time
-
+            
             //  +   math and string concatenation
             //  =   variable assignment
             //  ==  tests for equality
