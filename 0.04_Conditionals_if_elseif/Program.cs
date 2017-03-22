@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _0._04_Conditionals_if_elseif
 {
@@ -19,7 +15,7 @@ namespace _0._04_Conditionals_if_elseif
 
             if (difference >= 700 && difference <= 1999)
             {
-                Console.WriteLine("I have some extra money. I should pay off my debt. I'll have $" + difference + " leftover.");
+                Console.WriteLine("I have extra money. I should pay off my debt. I'll have $" + difference + " left.");
             }
             else if ((bankAccount - debt > 2000))
             {

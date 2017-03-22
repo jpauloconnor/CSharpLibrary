@@ -26,11 +26,8 @@ namespace _0._25_LINQ
                 Console.WriteLine(name);
             }
 
-
             //Example #2 - We can use LINQ to query objects.
-
             //This is done after you build the class below.
-
             QueryEmployees();
             Console.WriteLine("  BREAK ");
             QueryTypes();

@@ -1,20 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _0._04_BooleanLogic
+namespace _0._04_Conditionals_if
 {
     class Program
     {
         static void Main(string[] args)
         {
-
             bool isOn = true;
             bool isHot = false;
 
-            //1
             if (isOn)
             {
                 Console.WriteLine("The light is on. It's bright.");
