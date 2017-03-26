@@ -20,10 +20,10 @@ namespace _0._12_collections_arrays
             ages[4] = 26;
 
             //To print one specific number:
-            Console.WriteLine(ages[2]);
+            //Console.WriteLine(ages[2]);
 
             //To print the whole array use a foreach:
-            foreach (var age in ages)
+            foreach (var age in ages.Take(2))
             {
                 Console.WriteLine(age);
             }

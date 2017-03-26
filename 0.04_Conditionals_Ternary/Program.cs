@@ -15,6 +15,7 @@ namespace _0._04_Conditionals_Ternary
             //Same as this:
             string response = ((number == 7) ? "hey, The number is 7, yo" : "The number is not 7, yo");
             Console.WriteLine(response);
+
             Console.ReadLine();
 
         }

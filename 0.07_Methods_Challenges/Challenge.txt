@@ -1,6 +1,4 @@
-﻿
-
-/*
+﻿/*
 BRONZE: Create a Netflix class with Properties of Name, Genre, Rating. Create three objects from that class.
 
 SILVER: Create a method called GetSuggestion() that returns different messages if 

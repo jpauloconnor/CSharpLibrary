@@ -7,7 +7,7 @@ Create an object and give each property a value.
 
 SILVER: 
 Create a method that prints out the RoomNumber to a guest.
-For instance, "You room number is C24".
+For instance, "Your room number is C24".
 
 GOLD: 
 Create a method that checks the availability of a room and prints the following:
