@@ -21,7 +21,7 @@ namespace _0._26_OOP_DEMO
             Console.WriteLine("Which type would you like to be?");
 
             string typeChoice = Console.ReadLine();
-            var type = player.ReturnType("HorseMage");
+//var type = player.ReturnType("HorseMage");
             // type = Console.ReadLine();
 
 

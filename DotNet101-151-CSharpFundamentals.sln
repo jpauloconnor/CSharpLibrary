@@ -133,6 +133,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0.99_Budget_Book_Tests", "0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0.21_Types_Reference", "0.21_Types_Reference\0.21_Types_Reference.csproj", "{8B13E2B7-0A57-436F-83BA-1568E1C7A20F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0.26_OOP_Demo_Paul", "0.26_OOP_Demo_Paul\0.26_OOP_Demo_Paul.csproj", "{A2CFC4C5-B73E-4F51-A347-5EC61BD6D257}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -399,6 +401,10 @@ Global
 		{8B13E2B7-0A57-436F-83BA-1568E1C7A20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B13E2B7-0A57-436F-83BA-1568E1C7A20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B13E2B7-0A57-436F-83BA-1568E1C7A20F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2CFC4C5-B73E-4F51-A347-5EC61BD6D257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2CFC4C5-B73E-4F51-A347-5EC61BD6D257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2CFC4C5-B73E-4F51-A347-5EC61BD6D257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2CFC4C5-B73E-4F51-A347-5EC61BD6D257}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
