@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace _0._99_Budget_Book
 {
     //1
-    class BudgetSheet
+    //27 change BudgetSheet to public, talk about internal
+    public class BudgetSheet
     {
         //9 Create a constructor
         public BudgetSheet()
@@ -43,8 +44,9 @@ namespace _0._99_Budget_Book
             foreach(decimal deposit in deposits)
             {
                 //21 - Keep track of highest and lowest
+                //However on Math. Show function F12 here to see the docs
                 activity.High = Math.Max(deposit, activity.High);
-                activity.Low = Math.Max(deposit, activity.High);
+                activity.Low = Math.Min(deposit, activity.Low);
 
                 //22 -back to program
 
@@ -55,6 +57,7 @@ namespace _0._99_Budget_Book
             activity.Average = balance / deposits.Count;
             
             return activity;
+
         }
 
     }

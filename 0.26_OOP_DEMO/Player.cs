@@ -47,6 +47,10 @@ namespace _0._26_OOP_DEMO
         CharacterType _characterType = CharacterType.Undefined;
 
         // CONSTRUCTORS
+        public Player()
+        {
+
+        }
         public Player(string firstName, string gamerName, CharacterType type)
         {
             this.PlayerName = firstName;
@@ -115,7 +119,39 @@ namespace _0._26_OOP_DEMO
  
         //METHODS
         //Attack, Defend, Heal, Respawn
-        public bool Attack()
+
+        public string DeclareType()
+        {
+            if(this.Type == CharacterType.HorseMage)
+            {
+                string message = "You are a Horse Mage"; 
+                Console.WriteLine(message);
+                return message;
+            } else
+            {
+                return "hey";
+            }
+
+        }
+
+       //public Type ReturnType(string typeChoice)
+       // {
+          
+       //     Player.CharacterType type= this.Type;
+
+       //     switch (typeChoice)
+       //     {
+       //         case "Horse Mage":
+       //             Console.WriteLine(Player.CharacterType.HorseMage);
+       //             break;
+               
+       //         default:
+       //             Console.WriteLine("Hey");
+       //             break;
+       //     }
+
+       // }
+    public bool Attack()
         {
             if (!this.IsDefinitelyLowOnPower)
             {

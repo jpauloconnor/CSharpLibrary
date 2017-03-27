@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _0._99_Budget_Book
 {
-    class BudgetActivity
+    public class BudgetActivity
     {
         //14 Separate class for showing stats
 
