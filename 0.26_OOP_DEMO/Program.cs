@@ -27,6 +27,8 @@ namespace _0._26_OOP_DEMO
             int playerType = int.Parse(Console.ReadLine());
             Console.WriteLine(playerType);
 
+            string typeChoice = Console.ReadLine();
+
             Player player = new Player(playerName, gamerName);
             player.ChooseType(playerType);
 
