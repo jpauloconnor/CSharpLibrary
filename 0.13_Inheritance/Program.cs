@@ -25,9 +25,7 @@ namespace _0._13_Inheritance
 
             Cat coryTheCat = new Cat();
 
-            Dog donnie = new Dog();
-
-            Elephant eleanor = new Elephant();
+            Console.ReadLine();
         }
     }
 }

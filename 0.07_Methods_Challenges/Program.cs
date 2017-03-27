@@ -30,6 +30,13 @@ namespace _0._07_Methods_Challenges
             thundercats.Rating = 4.0;
             thundercats.Genre = "Cartoon/Action";
             thundercats.shows();
+            thundercats.Minutes = 30;
+            Console.WriteLine(thundercats.ShowMinutesLeft(15));
+
+            thundercats.ShowWhoViewed("Ava");
+
+
+            thundercats.GetSuggestion();
 
             List<NetflixShow> shows = new List<NetflixShow>
                     {

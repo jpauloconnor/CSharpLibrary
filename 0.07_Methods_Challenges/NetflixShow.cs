@@ -12,6 +12,7 @@ namespace _0._07_Methods_Challenges
         public string Name { get; set; }
         public double Rating { get; set; }
         public string Genre { get; set; }
+        public int Minutes { get; set; }
 
         //Methods
         public void shows()
@@ -19,13 +20,40 @@ namespace _0._07_Methods_Challenges
             Console.WriteLine("Name: {0}  Genre: {1}  Rating: {2}", Name, Genre, Rating);
         }
 
-        public string GetSuggestion()
+        public void GetSuggestion()
         {
-            if (this.Rating >= 4)
-                return "You definitely need to watch this show";
+            if (this.Rating >= 3.5)
+                Console.WriteLine("You definitely need to watch this show");
             else
-                return "You probably won't want to watch this show";
+                Console.WriteLine("You probably won't want to watch this show");
         }
+
+        public string PayBill()
+        {
+            return "Your monthly bill is ...";
+        }
+
+        public int ShowTotalMinutes()
+        {
+            return Minutes;
+        }
+
+       public string ShowWhoViewed(string user)
+        {
+            Console.WriteLine(user);
+            return user;
+        }
+
+
+        public int ShowMinutesLeft(int minutesWatched)
+        {
+            int minutesLeft = Minutes - minutesWatched;
+            return minutesLeft;
+        }
+
+
+
+
     }
 }
 

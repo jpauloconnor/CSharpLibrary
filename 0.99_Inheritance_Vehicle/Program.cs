@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _0._14_Override
+namespace _0._99_Inheritance_Vehicle
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //TODO: Show overriding and virtual.
-
-
         }
     }
 }

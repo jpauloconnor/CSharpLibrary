@@ -178,7 +178,6 @@ namespace _0._26_OOP_Demo_Paul
 
         public void StatePowerLevel()
         {
-
             Console.WriteLine("I am a level {0}", this.PlayerPower);
         }
 
