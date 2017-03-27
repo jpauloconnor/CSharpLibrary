@@ -35,14 +35,16 @@ namespace _0._26_OOP_DEMO
 
         public static new void Attack(Player p)
         {
-            Dictionary<string, int> Attacks = new Dictionary<string, int> { { "Claw Slash", 10 }, { "Tail Wip", 20 } , { "Claw Slas1h", 10 }, { "Tail Wi1p", 20 } , { "Claw Sla2sh", 10 }, { "Ta2il Wip", 20 } , { "C3law Slash", 10 }, { "Tail3 Wip", 20 } };
+            Dictionary<string, int> Attacks = new Dictionary<string, int> { { "Claw Slash", 10 }, { "Tail Wip", 20 } , { "Head Bash", 30 }, { "Running Man", 40 }};
             Random rnd = new Random();
+            var singleAttack = Attacks.ElementAt(rnd.Next(Attacks.Count));
+            int attackVal = singleAttack.Value;
+            string attackName = singleAttack.Key;
+
             int r = rnd.Next(Attacks.Count);
             Console.WriteLine("Here I come!");
-            Console.WriteLine(Attacks.First().Key);
-            Console.WriteLine(Attacks.ElementAt(rnd.Next(0,Attacks.Count)).Value);
-            Console.WriteLine("LizardDog attacks with {0} and takes {1} damage", Attacks["Claw Slash"], Attacks["Claw Slash"]);
-            p.CurrentPower -= 10;
+            Console.WriteLine("LizardDog attacks with {0} and takes {1} damage", attackName, attackVal);
+            p.CurrentPower -= attackVal;
             Console.WriteLine("{0} health is now at {1}", p.GamerName, p.CurrentPower);
         }
     }
