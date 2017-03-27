@@ -12,7 +12,7 @@ namespace _0._12_Collections_Dictionaries_Challenges
         {
 
             /*********BRONZE*********/
-            Dictionary<string, string> bestPicture = new Dictionary<string, string>()
+     Dictionary<string, string> bestPicture = new Dictionary<string, string>()
     {
         {"2000", "American Beauty"},
         {"2001", "Gladiator"},
@@ -49,7 +49,7 @@ namespace _0._12_Collections_Dictionaries_Challenges
 
             foreach (KeyValuePair<string, string[]> pair in bestPictureNominees)
             {
-                Console.WriteLine("{0}, {1}, {2}", pair.Key, pair.Value[0], pair.Value[1]);
+                Console.WriteLine("{0}: {1}, {2}", pair.Key, pair.Value[0], pair.Value[1]);
 
             }
 

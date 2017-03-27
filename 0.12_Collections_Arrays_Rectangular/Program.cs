@@ -20,6 +20,12 @@ namespace _0._12_Collections_Arrays_Rectangular
                 {2,0,1}
             };
 
+            foreach(int number in numbers)
+            {
+                Console.WriteLine(number);
+            }
+            Console.WriteLine(numbers);
+            Console.ReadLine();
 
             //Three dimensional!!!
             var cuboid = new int[,,]

@@ -20,6 +20,7 @@ namespace _0._20_Try_Catch
                 Console.WriteLine("TempIsZeroException: {0}", exception.Message);
             }
             Console.ReadKey();
+
         }
     }
 }

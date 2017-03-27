@@ -10,12 +10,12 @@ namespace _0._06_Objects_Challenges
     {
         static void Main(string[] args)
         {
-            Hotel a23 = new Hotel();
-            a23.IsAvailable = false;
-            a23.RoomNumber = "a23";
-            a23.NumRooms = 3;
-            a23.PrintNumber();
-            a23.CheckAvailability();
+            Hotel penthouseSuite = new Hotel();
+            penthouseSuite.IsAvailable = false;
+            penthouseSuite.RoomNumber = "a23";
+            penthouseSuite.NumRooms = 3;
+            penthouseSuite.PrintNumber();
+            penthouseSuite.CheckAvailability();
 
             Console.ReadLine();
         }

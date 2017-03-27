@@ -13,6 +13,10 @@ namespace _0._06_Objects_Challenges
         public bool IsAvailable { get; set; }
         public int NumRooms { get; set; }
 
+
+
+
+
         //Silver
         public void PrintNumber()
         {
