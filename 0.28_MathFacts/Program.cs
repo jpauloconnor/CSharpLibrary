@@ -26,7 +26,6 @@ namespace _0._28_MathFacts
                     int endNum = 0;
                     do
                     {
-                        MainAppTitle();
                         addTable.AdditionTitle();
                         try
                         {

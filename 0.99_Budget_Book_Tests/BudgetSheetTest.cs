@@ -12,6 +12,7 @@ namespace _0._99_Budget_Book_Tests
     public class BudgetSheetTest
     {
 		[TestMethod]
+        
 			public void TestHighestDeposit()
 			{
             //27Add a reference to the Budget_Book
@@ -52,8 +53,10 @@ namespace _0._99_Budget_Book_Tests
 
             BudgetActivity testResult = sheet.ShowAccountActivity();
             // Assert.AreEqual(10.0M, testResult.Average);
-		
+
             //29Problem: imperfect average.
+            Assert.AreEqual(10.0M, testResult.Average);
+     
             //Assert.AreEqual(10.433333333M, testResult.Average, 0.01M);
 
         }

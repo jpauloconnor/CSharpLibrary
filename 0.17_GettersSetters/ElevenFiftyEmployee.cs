@@ -64,5 +64,7 @@ namespace _0._17_GettersSetters
         //Use this if you don't have conditions to deal with.
         public string CommonWorkQuote { get; set; }
         public string CompanyName { get; set; }
+
+
     }
 }

@@ -10,6 +10,11 @@ namespace _0._10_AccessModifiers
     {
         static void Main(string[] args)
         {
+            Acura acura = new Acura("TL", 2009, 50000);
+
+            acura.AcuraDetails();
+
+            Console.ReadLine();
         }
     }
 }
