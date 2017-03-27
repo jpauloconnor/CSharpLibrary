@@ -10,54 +10,66 @@ namespace _0._26_OOP_Demo_Paul
     {
         static void Main(string[] args)
         {
-            //Name Character
-            Console.WriteLine("What is your name, warrior?");
-            Player player = new Player();
-            player.PlayerName = Console.ReadLine();
-            string playerName = player.PlayerName.ToString();
+          
+            //SetUp
+            Console.WriteLine("What is your name, soldier?");
+            string playerName = Console.ReadLine();
 
-            Console.WriteLine("What is your game name?");
-            player.GamerName = Console.ReadLine();
-            string gamerName = player.GamerName.ToString();
+            Console.WriteLine("What is your gamer name, or your epithet?");
+            string gamerName = Console.ReadLine();
 
-            //Pick a character type
-            Console.WriteLine("What kind of character would you like to be? Choose  BlitzenBlopper, TrollCat, HorseMage?");
-            // player.Type = Console.ReadLine();
-            var characterType = Console.ReadLine();
-            characterType = player.Type.ToString();
-            Console.WriteLine(characterType);
+            Console.WriteLine("What's your player type?\n" +
+                               "1: The JS Wizard\n" +
+                               "2: Troll Cat\n" +
+                               "3: Horse Mange\n" +
+                               "4: Soldier\n" +
+                               "5: Human");
 
+            int playerType = int.Parse(Console.ReadLine());
+            
+            Player player = new Player(playerName, gamerName);
+            player.ChooseType(playerType);
+
+            Console.WriteLine("Welcome:\n {0}", player.ToString());
             //Pick a weapon
-            Console.WriteLine("What is the name of your sword?");
-            var weapon = Console.ReadLine();
+            Console.WriteLine("What's your weapon?\n" +
+                               "1: The Sword of Smigel\n" +
+                               "2: The Axe of Evermore\n" +
+                               "3: The Ring of Valkrow\n" +
+                               "4: The Laser of Lambeaux\n" +
+                               "5: The Dusty Stick");
+
+
+            //TODO: Make a weapon enum.
+            int weaponType = int.Parse(Console.ReadLine());
 
             //Go to battle
             Console.WriteLine("Would you like to go to battle now? Type yes or no.");
-            
-
-            //Put this in a function....
             string response = Console.ReadLine();
 
-            //  CREATE A FOE
             Creature lizard = new Creature();
-
             //Doing Battle
             if (response == "yes")
             {
                 lizard.AnnounceFight(playerName);
             }
-            else if(response == "no")
+            else
             { 
                 lizard.CallCoward();
-            }
-            else
-            {
-                lizard.DidNotGet();
             }
 
             //FOE'S POWER LEVEL
             lizard.GetPowerLevel();
             lizard.AnnouncePower();
+
+            while (player.CurrentPower > 0)
+            {
+                lizard.Speak();
+                lizard.Attack(player);
+            }
+
+            lizard.Speak();
+            lizard.Attack(player);
             player.DeclareType();
             response = Console.ReadLine();
             if (response == "yes")
@@ -67,6 +79,9 @@ namespace _0._26_OOP_Demo_Paul
 
             Console.ReadLine();
            
+
+
+
             //Meet Bubble Creature
             //Win or lose the game
 

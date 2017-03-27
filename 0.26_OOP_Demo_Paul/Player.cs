@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace _0._26_OOP_Demo_Paul
 {
+
+    
+
     public class Player
     {
         /// <summary>
@@ -23,6 +26,7 @@ namespace _0._26_OOP_Demo_Paul
             Structs
             Classes
          */
+
         //CONSTANTS
         const int MAX_ATTACK_LEVEL = 100;
         const int MAX_DEFENSE_LEVEL = 100;
@@ -46,16 +50,16 @@ namespace _0._26_OOP_Demo_Paul
         string _gamerName = null;
         int _gamerLevel = 0;
         CharacterType _characterType = CharacterType.Undefined;
+        WeaponType _weaponType = WeaponType.Undefined;
+
 
         // CONSTRUCTORS
-        public Player()
-        {
-
-        }
-        public Player(string firstName, string gamerName, CharacterType type)
+        public Player(string firstName, string gamerName, CharacterType type = CharacterType.Human)
         {
             this.PlayerName = firstName;
             this.GamerName = gamerName;
+            this._gamerLevel = 0;
+            this.CurrentPower = 100;
             this.Type = type;
         }
 
@@ -63,15 +67,34 @@ namespace _0._26_OOP_Demo_Paul
         // Custom type.
         public enum CharacterType
         {
-            BlitzenBlopper,
-            TrollCat,
-            HorseMage,
-            Soldier,
-            Undefined
+            BlitzenBlopper = 0,
+            TrollCat = 1,
+            HorseMage = 2,
+            Soldier = 3,
+            Undefined = 4,
+            Human = 5
         }
 
-        // PROPERTIES
+        public enum WeaponType
+        {
+            TheSwordOfSmigel = 0,
+            TheAxeOfEvermore = 1,
+            TheRingOfValkrow = 2,
+            TheLaserOfLambeaux = 3,
+            TheDustyStick = 4,
+            Undefined = 5
+
+        }
+
+        /// <summary>
+        /// INTERFACES
+        /// </summary>
+       
+
+        
+        /// PROPERTIES
         public string PlayerName { get; set; }
+        public int CurrentPower { get; set; }
         public string GamerName
         {
             get { return _gamerName; }
@@ -119,9 +142,58 @@ namespace _0._26_OOP_Demo_Paul
         }
         public int PlayerPower { get; set; }
 
+        
         //METHODS
-        //Attack, Defend, Heal, Respawn
+        //Choose Character, Choose Weapon, Attack, Defend, Heal, Respawn
+        public CharacterType ChooseType(int t)
+        {
+            switch (t)
+            {
+                case 1:
+                    Console.WriteLine("Ah, a JSWizard. Pretty Ordinary.");
+                    return this._characterType = CharacterType.BlitzenBlopper;
+                case 2:
+                    Console.WriteLine("You are a Troll Cat. What in the world is that?");
+                    return this._characterType = CharacterType.TrollCat;
+                case 3:
+                    Console.WriteLine("A Horse Mage. Sounds like something my dog puked up.");
+                    return this._characterType = CharacterType.HorseMage;
+                case 4:
+                    Console.WriteLine("You are a little Soldier. How charming.");
+                    return this._characterType = CharacterType.Soldier;
+                default:
+                    Console.WriteLine("You are a Human");
+                    return this._characterType = CharacterType.Human;
 
+            }
+        }
+
+        public WeaponType ChooseWeaponType(int t)
+        {
+            switch (t)
+            {
+                case 1:
+                    Console.WriteLine("The Axe.");
+                    return this._weaponType = WeaponType.TheAxeOfEvermore;
+                case 2:
+                    Console.WriteLine("A Dusty Stick.");
+                    return this._weaponType = WeaponType.TheDustyStick;
+                case 3:
+                    Console.WriteLine("The Laser of Lambeaux.");
+                    return this._weaponType = WeaponType.TheLaserOfLambeaux;
+                case 4:
+                    Console.WriteLine("The Ring of Valkrom.");
+                    return this._weaponType = WeaponType.TheRingOfValkrow;
+                case 5:
+                    Console.WriteLine("The Sword of Smigel.");
+                    return this._weaponType = WeaponType.TheSwordOfSmigel;
+
+                default:
+                    Console.WriteLine("The Sword of Smigel");
+                    return this._weaponType = WeaponType.TheSwordOfSmigel;
+
+            }
+        }
 
         public string DeclareType()
         {
@@ -182,11 +254,10 @@ namespace _0._26_OOP_Demo_Paul
         }
 
 
-
-        //public override string ToString() /* override so we print first name + last name when calling ToString() */
-        //{
-        //    return String.Format("this.PlayerName, this.GamerName, this.Type);
-        //}
+        public override string ToString() /* override so we print first name + last name when calling ToString() */
+        {
+            return String.Format("Player Name: {0} \nGamer Name: {1} \nPlayer Type: {2}", this.PlayerName, this.GamerName, this.Type);
+        }
 
     }
 }
