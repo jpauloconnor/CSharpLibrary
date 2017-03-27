@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace _0._26_OOP_DEMO
 {
+    public enum CharacterType
+    {
+        BlitzenBlopper = 0,
+        TrollCat = 1,
+        HorseMage = 2,
+        Soldier = 3,
+        Undefined = 4,
+        Human = 5
+    }
+
     class Player
     {
         /// <summary>
@@ -33,7 +43,6 @@ namespace _0._26_OOP_DEMO
 
         //FIELDS
         //Player Status
-        int _currentPower = 100;
         int _attackLevel = 0;
         int _defenseLevel = 0;
         bool _isAlive = true;
@@ -41,36 +50,26 @@ namespace _0._26_OOP_DEMO
         bool _isInBonusLand = true;
         bool _hasRandomPowerUpLaser = true;        
         // Player details.
-        string _firstName = null;
         string _gamerName = null;
-        int _gamerLevel = 0;
+        int _gamerLevel;
         CharacterType _characterType = CharacterType.Undefined;
 
         // CONSTRUCTORS
-        public Player()
-        {
-
-        }
-        public Player(string firstName, string gamerName, CharacterType type)
+        public Player(string firstName, string gamerName, CharacterType type = CharacterType.Human)
         {
             this.PlayerName = firstName;
             this.GamerName = gamerName;
+            this._gamerLevel = 0;
+            this.CurrentPower = 100;
             this.Type = type;
         }
 
         //ENUMS
         // Custom type.
-        public enum CharacterType
-        {
-            BlitzenBlopper,
-            TrollCat,
-            HorseMage,
-            Soldier, 
-            Undefined
-        }
 
         // PROPERTIES
         public string PlayerName { get; set; }
+        public int CurrentPower { get; set; }
         public string GamerName
         {
             get { return _gamerName; }
@@ -95,13 +94,6 @@ namespace _0._26_OOP_DEMO
                 return _isInBonusLand;
             }
         }
-        public bool NeedsPowerDesperately
-        {
-            get
-            {
-                return _currentPower <= POWER_LEVEL_CLOSE_TO_DYING;
-            }
-        }
         public CharacterType Type
         {
             get
@@ -115,10 +107,32 @@ namespace _0._26_OOP_DEMO
                 else
                     _characterType = value;
             }
-        } 
- 
+        }
+
         //METHODS
         //Attack, Defend, Heal, Respawn
+        public CharacterType ChooseType(int t)
+        {
+            switch (t)
+            {
+                case 1:
+                    Console.WriteLine("You are a Blizen Blopper");
+                    return this._characterType = CharacterType.BlitzenBlopper;
+                case 2:
+                    Console.WriteLine("You are a Troll Cat");
+                    return this._characterType = CharacterType.TrollCat;
+                case 3:
+                    Console.WriteLine("You are a Horse Mage");
+                    return this._characterType = CharacterType.HorseMage;
+                case 4:
+                    Console.WriteLine("You are a Soldier");
+                    return this._characterType = CharacterType.Soldier;
+                default:
+                    Console.WriteLine("You are a Human");
+                    return this._characterType = CharacterType.Human;
+
+            }
+        }
 
         public string DeclareType()
         {
@@ -134,23 +148,6 @@ namespace _0._26_OOP_DEMO
 
         }
 
-       //public Type ReturnType(string typeChoice)
-       // {
-          
-       //     Player.CharacterType type= this.Type;
-
-       //     switch (typeChoice)
-       //     {
-       //         case "Horse Mage":
-       //             Console.WriteLine(Player.CharacterType.HorseMage);
-       //             break;
-               
-       //         default:
-       //             Console.WriteLine("Hey");
-       //             break;
-       //     }
-
-       // }
     public bool Attack()
         {
             if (!this.IsDefinitelyLowOnPower)
