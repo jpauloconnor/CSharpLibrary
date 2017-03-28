@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _0._26_OOP_Game_Official
 {
-    public class Player : Character
+    public class Player : Character, IHealable
     {
 
         // Player fields
@@ -182,6 +182,23 @@ namespace _0._26_OOP_Game_Official
         public void StatePowerLevel()
         {
             Console.WriteLine("I am a level {0}", this.PlayerPower);
+        }
+
+        //INterface reqs.
+        public void GetHealing(Wound wound)
+        {
+            if (wound.IsBleeding)
+            {
+                //Get help
+            }
+        }
+
+        public void CheckHealth(Player player)
+        {
+            if(player.CurrentPower < 10)
+            {
+                Console.WriteLine("You are dangerously close to dying!");
+            }
         }
 
 
