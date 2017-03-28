@@ -9,7 +9,7 @@ namespace _0._26_OOP_Demo_Paul
 
     
 
-    public class Player
+    public class Player 
     {
         /// <summary>
         /// Discuss stylecop order: http://stackoverflow.com/questions/150479/order-of-items-in-classes-fields-properties-constructors-methods
@@ -237,6 +237,21 @@ namespace _0._26_OOP_Demo_Paul
         {
             //TODO: Code
             return true;
+        }
+
+        public void Attack(Creature c)
+        {
+            Dictionary<string, int> Attacks = new Dictionary<string, int> { { "Heroic Hammer", 10 }, { "Dusty Stick Shot", 20 }, { "Winning Joly", 30 }, { "Esteemed Suplex", 40 } };
+            Random rnd = new Random();
+            var singleAttack = Attacks.ElementAt(rnd.Next(Attacks.Count));
+            int attackVal = singleAttack.Value;
+            string attackName = singleAttack.Key;
+
+            int r = rnd.Next(Attacks.Count);
+            Console.WriteLine("Here I come!");
+            Console.WriteLine("attacks with {0} and takes {1} damage", attackName, attackVal);
+            c.Power -= attackVal;
+            Console.WriteLine("{0} health is now at {1}", c.Name, c.Power);
         }
 
         public int GetPowerLevel()

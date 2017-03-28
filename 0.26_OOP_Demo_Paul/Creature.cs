@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace _0._26_OOP_Demo_Paul
 {
-    class Creature
+    public class Creature
     {
 
         //PROPERTIES
         public int Power { get; set; }
+        public int Name { get; internal set; }
 
         //METHODS
         public void AnnounceFight(string gamerName)
@@ -63,7 +64,5 @@ namespace _0._26_OOP_Demo_Paul
             p.CurrentPower -= attackVal;
             Console.WriteLine("{0} health is now at {1}", p.GamerName, p.CurrentPower);
         }
-
-
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace _0._26_OOP_Demo_Paul
@@ -62,10 +63,24 @@ namespace _0._26_OOP_Demo_Paul
             lizard.GetPowerLevel();
             lizard.AnnouncePower();
 
-            while (player.CurrentPower > 0)
+
+            // the thread is paused for 5000 milliseconds
+         
+        while (player.CurrentPower > 0 || lizard.Power > 0)
             {
                 lizard.Speak();
                 lizard.Attack(player);
+
+                int sleepfor = 5000;
+              
+                Thread.Sleep(sleepfor);
+                Console.WriteLine("****************");
+
+                player.Attack(lizard);
+
+                Thread.Sleep(sleepfor);
+                Console.WriteLine("****************");
+
             }
 
             lizard.Speak();
