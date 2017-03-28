@@ -60,7 +60,13 @@ namespace _0._26_OOP_DEMO
                 else if (player.CurrentPower <= 0)
                 {
                     Console.WriteLine("You Die");
-                } else
+                }
+                else if (userAttackAnswer == "n")
+                {
+                    lizard.Insult();
+                    break;
+                }
+                else
                 {
                     Console.WriteLine("Contiue on your journey");
                     break; 

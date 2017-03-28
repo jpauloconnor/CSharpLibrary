@@ -9,6 +9,7 @@ namespace _0._26_OOP_DEMO
 {
     abstract class Enemy
     {
+        ArrayList insult = new ArrayList { "buck-o", "grandpa", "loser", "wimp", "trash slinger", "window licker", "Mr. always on time" };
         Random rnd = new Random();
         //my enemy is the inner me
         public string Name { get; set; }
@@ -26,12 +27,11 @@ namespace _0._26_OOP_DEMO
             Console.WriteLine("Here I come!");
             Console.WriteLine("{2} attacks with {0} and takes {1} damage", attackName, attackVal, emname);
             p.CurrentPower -= attackVal;
-            Console.WriteLine("{0} health is now at {1}", p.GamerName, p.CurrentPower);
+            Console.WriteLine("{0} health is now at {1}%", p.GamerName, p.CurrentPower);
         }
 
         public void Speak()
         {
-            ArrayList insult = new ArrayList { "buck-o", "grandpa", "loser", "wimp", "trash slinger", "window licker", "Mr. always on time" };
             int r = rnd.Next(insult.Count);
 
             Console.WriteLine("You're on the wrong side of the forest {0}", insult[r]);
@@ -39,7 +39,10 @@ namespace _0._26_OOP_DEMO
         
         public void Insult()
         {
-            ArrayList goodbye = new ArrayList { "Yea and don't come back", "Next time fight me like a real OctoCat!", "Look whos a mommas kid!" };
+            ArrayList goodbye = new ArrayList { "and don't come back", "Next time fight me like a real OctoCat!", "Look whos a mommas kid!" };
+            int r = rnd.Next(goodbye.Count);
+
+            Console.WriteLine("You're on the wrong side of the forest {1} {0}", goodbye[r], insult[r]);
         }
 
     }
@@ -57,7 +60,6 @@ namespace _0._26_OOP_DEMO
         {
             if(this.PowerLevel <= 0)
             {
-                
                 Console.Clear();
                 Console.WriteLine("{0} you have conquored the {1}", p.GamerName, this.Name);
             }
