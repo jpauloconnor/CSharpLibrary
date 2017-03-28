@@ -80,6 +80,7 @@ namespace _0._26_OOP_Game_Official
                 player.Speak();
                 player.Attack(creature);
                 RunThread(5000);
+                player.CheckHealth(player);
 
                 if(creature.CurrentPower <= 0)
                 {

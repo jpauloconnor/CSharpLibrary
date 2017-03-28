@@ -44,9 +44,11 @@
   <ItemGroup>
     <Compile Include="Character.cs" />
     <Compile Include="Creature.cs" />
+    <Compile Include="IHealable.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wound.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
