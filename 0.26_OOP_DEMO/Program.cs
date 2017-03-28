@@ -11,6 +11,7 @@ namespace _0._26_OOP_DEMO
     {
         static void Main(string[] args)
         {
+            string userAttackAnswer = null;
             //SetUp
             Console.WriteLine("What is your name?");
             string playerName = Console.ReadLine();
@@ -31,22 +32,42 @@ namespace _0._26_OOP_DEMO
             player.ChooseType(playerType);
 
 
-            Console.WriteLine("Your player:\n {0}",player.ToString());
+            Console.WriteLine("Your player:\n{0}",player.ToString());
 
             //Prompted to adventure
             Console.WriteLine("Ready for an adventure? Enter the Hidden Forest(That you found)");
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("You have encountered the notorious LizardDog...Fight!");
+            LizardDog lizard = new LizardDog();
+            lizard.Speak();
+            lizard.LizardAttack(player);
 
-            LizardDog.Speak();
-            LizardDog.Attack(player);
-            //Enemy class with attack points, name, and weapon
+            while (true)
+            {
+                if(player.CurrentPower > 0 && lizard.PowerLevel>0)
+                {
+                    Console.WriteLine("Would you like to attack? y/n");
+                    userAttackAnswer = Console.ReadLine();
+                }
+                
+                
+                if (userAttackAnswer == "y" && lizard.PowerLevel > 0)
+                {
+                    player.Attack(lizard);
+                    lizard.LizardAttack(player);
+                }
+                else if (player.CurrentPower <= 0)
+                {
+                    Console.WriteLine("You Die");
+                } else
+                {
+                    Console.WriteLine("Contiue on your journey");
+                    break; 
+                }
+            }
 
 
-            //You go through the forest and meet a Lizard Dog
-            //Create a new Lizard
-
-
-
-            // Console.WriteLine(john.ToString());
             Console.ReadLine();
         }
     }

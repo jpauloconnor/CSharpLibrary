@@ -148,7 +148,7 @@ namespace _0._26_OOP_DEMO
 
         }
 
-    public bool Attack()
+        public bool Attack()
         {
             if (!this.IsDefinitelyLowOnPower)
             {
@@ -161,6 +161,33 @@ namespace _0._26_OOP_DEMO
                 return false;
             }
         }
+        public void Attack(Enemy e)
+        {
+            Console.WriteLine("What would you like to do?\n" +
+                                "1: Party Like A RockStar(10pt ATK)\n" +
+                                "2: Flaming Jazz Hands(30pt ATK)\n" +
+                                "3: Drink a Four Loko(15pt HEALTH)");
+            int playerChoice = int.Parse(Console.ReadLine());
+
+            switch (playerChoice)
+            {
+                case 1:
+                    e.PowerLevel -= 10;
+                    break;
+                case 2:
+                    e.PowerLevel -= 30;
+                    break;
+                case 3:
+                    this.CurrentPower += 15;
+                    break;
+                default:
+                    Console.WriteLine("Invalid Choice!! Lose your round");  
+                    break;
+            }
+
+            Console.WriteLine("You have reduced {0}'s health to {1}", e.Name, e.PowerLevel);
+        }
+
         public bool Defend()
         {
             return true;
