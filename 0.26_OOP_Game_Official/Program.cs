@@ -5,13 +5,12 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace _0._26_OOP_Demo_Paul
+namespace _0._26_OOP_Game_Official
 {
     class Program
     {
         static void Main(string[] args)
         {
-          
             //SetUp
             Console.WriteLine("What is your name, soldier?");
             string playerName = Console.ReadLine();
@@ -27,10 +26,19 @@ namespace _0._26_OOP_Demo_Paul
                                "5: Human");
 
             int playerType = int.Parse(Console.ReadLine());
-            
+
+           
+
             Player player = new Player(playerName, gamerName);
             player.ChooseType(playerType);
 
+            Console.WriteLine("" +
+               "" +
+               "" +
+               "" +
+               "");
+
+        
             Console.WriteLine("Welcome:\n {0}", player.ToString());
             //Pick a weapon
             Console.WriteLine("What's your weapon?\n" +
@@ -40,68 +48,62 @@ namespace _0._26_OOP_Demo_Paul
                                "4: The Laser of Lambeaux\n" +
                                "5: The Dusty Stick");
 
-
-            //TODO: Make a weapon enum.
             int weaponType = int.Parse(Console.ReadLine());
 
             //Go to battle
             Console.WriteLine("Would you like to go to battle now? Type yes or no.");
             string response = Console.ReadLine();
 
-            Creature lizard = new Creature();
+            Creature creature = new Creature();
+            creature.CreatureName = "Lizard Dog";
             //Doing Battle
             if (response == "yes")
             {
-                lizard.AnnounceFight(playerName);
+                creature.AnnounceFight(playerName);
+                RunThread(5000);
             }
             else
-            { 
-                lizard.CallCoward();
-            }
-
-            //FOE'S POWER LEVEL
-            lizard.GetPowerLevel();
-            lizard.AnnouncePower();
-
-
-            // the thread is paused for 5000 milliseconds
-         
-        while (player.CurrentPower > 0 || lizard.CreaturePower > 0)
             {
-                lizard.Speak();
-                lizard.Attack(player);
-
-                int sleepfor = 5000;
-              
-                Thread.Sleep(sleepfor);
-                Console.WriteLine("****************");
-
-                player.Attack(lizard);
-
-                Thread.Sleep(sleepfor);
-                Console.WriteLine("****************");
-
+                creature.CallCoward();
             }
 
-            lizard.Speak();
-            lizard.Attack(player);
-            player.DeclareType();
-            response = Console.ReadLine();
-            if (response == "yes")
-                player.Attack();
-            else
-                player.AnotherDay();
+            //ESTABLISH CREATURE'S POWER LEVEL
+            creature.GetPowerLevel();
+            creature.AnnouncePower();
+
+
+            //BATTLE SEQUENCE
+            while (player.CurrentPower > 0 || creature.CreaturePower > 0)
+            {
+                creature.Speak();
+                creature.Attack(player);
+                player.Speak();
+                player.Attack(creature);
+                RunThread(5000);
+
+                if(creature.CurrentPower <= 0)
+                {
+                    Console.WriteLine(player.GamerName + " Wins!"); 
+                }
+                if(player.CurrentPower <= 0)
+                {
+                    Console.WriteLine(creature.CreatureName + " wins!");
+                }
+            }
 
             Console.ReadLine();
-           
-
-
 
             //Meet Bubble Creature
             //Win or lose the game
 
-
-
         }
+
+        public static void RunThread(int pauseTime)
+        {
+            int sleepFor = pauseTime;
+            Thread.Sleep(sleepFor);
+            Console.WriteLine("                 ");
+        }
+
     }
 }
