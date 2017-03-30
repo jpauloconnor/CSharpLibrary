@@ -54,9 +54,26 @@ namespace _0._12_Collections_Lists
             {
                 Console.WriteLine(concept);
             }
-            
-            Console.WriteLine(conceptList.Capacity);
 
+            Console.WriteLine("");
+            Console.WriteLine("Example of ForEach and Lambda");
+            conceptList.ForEach(concept => Console.WriteLine(concept));
+            Console.WriteLine("================");
+            List<string> names = new List<string>
+            {
+                "James", "Paul", "Kenn", "Jenn", "Sheriff"
+            };
+
+            names.ForEach(name => Console.WriteLine(name));
+            names.Remove("James");
+            Console.WriteLine("================");
+            
+            names.ForEach(name => Console.WriteLine(name));
+
+
+            Console.WriteLine(conceptList[0]);
+            Console.WriteLine(conceptList.Capacity);
+            
 
             Console.ReadLine();
 
