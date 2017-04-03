@@ -11,6 +11,8 @@ namespace _0._26_OOP_Game_Official
     {
         static void Main(string[] args)
         {
+            string userAttackAnswer = null;
+           
             //SetUp
             Console.WriteLine("What is your name, soldier?");
             string playerName = Console.ReadLine();
@@ -71,6 +73,36 @@ namespace _0._26_OOP_Game_Official
             creature.GetPowerLevel();
             creature.AnnouncePower();
 
+
+            while (true)
+            {
+                if (player.CurrentPower > 0 && creature.CreaturePower > 0)
+                {
+                    Console.WriteLine("Would you like to attack? y/n");
+                    userAttackAnswer = Console.ReadLine();
+                }
+
+
+                if (userAttackAnswer == "y" && creature.CreaturePower > 0)
+                {
+                    player.Attack(creature);
+                    creature.Attack(player);
+                }
+                else if (player.CurrentPower <= 0)
+                {
+                    Console.WriteLine("You Die");
+                }
+                else if (userAttackAnswer == "n")
+                {
+                    //creature.Insult();
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Contiue on your journey");
+                    break;
+                }
+            }
 
             //BATTLE SEQUENCE
             while (player.CurrentPower > 0 || creature.CreaturePower > 0)

@@ -9,7 +9,6 @@ namespace _0._26_OOP_Game_Official
 {
     public class Creature : Character
     {
-
         //PROPERTIES
         public int CreaturePower { get; set; }
         public string CreatureName { get; set; }
@@ -57,12 +56,9 @@ namespace _0._26_OOP_Game_Official
             string attackName = singleAttack.Key;
 
             int r = rnd.Next(Attacks.Count);
-            Console.WriteLine("Here I come!");
             Console.WriteLine("LizardDog attacks with {0} and gives {1} damage", attackName, attackVal);
             p.CurrentPower -= attackVal;
             Console.WriteLine("{0} health is now at {1}", p.GamerName, p.CurrentPower);
         }
-
-
     }
 }

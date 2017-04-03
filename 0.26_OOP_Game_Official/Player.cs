@@ -39,7 +39,6 @@ namespace _0._26_OOP_Game_Official
             Human = 5
         }
 
-
         public enum WeaponType
         {
             TheSwordOfSmigel = 0,
@@ -79,13 +78,6 @@ namespace _0._26_OOP_Game_Official
             }
         }
 
-
-        /// <summary>
-        /// METHODS
-        /// Choose Character, Choose Weapon, Attack, Defend, Heal, Respawn
-        /// </summary>
-        /// <param name="t"></param>
-        /// <returns></returns>
         public CharacterType ChooseType(int t)
         {
             switch (t)
@@ -148,7 +140,6 @@ namespace _0._26_OOP_Game_Official
             }
 
         }
-
 
         public void Attack(Creature c)
         {

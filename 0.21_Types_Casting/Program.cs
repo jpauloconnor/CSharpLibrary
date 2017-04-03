@@ -13,7 +13,6 @@ namespace _0._21_Types_Casting
             //Smaller data type to larger type -> converts implicitly
             //Larger data type to smaller data type -> We have to do the conversion.
 
-
             //Implicit example - Easy
             int typeCastExampleImplicit = 50;
             float floatConversionExample = typeCastExampleImplicit;//Implicit conversion happens. Float is a bigger data type than int.
@@ -30,6 +29,11 @@ namespace _0._21_Types_Casting
             //Typecast operator
             int typeCastExample = (int)floatNum;
             Console.WriteLine("Type Cast Example: {0}", typeCastExample);
+
+            //int to float
+            float convertNum = 123.90F;
+            int convertedNum = (int)convertNum;
+           
 
             //.NET convert class
             float temperature = 98.6F;
