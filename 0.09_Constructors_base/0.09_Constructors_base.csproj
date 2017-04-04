@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5AB935B2-E0FB-4E84-9625-854B13C99F70}</ProjectGuid>
+    <ProjectGuid>{B5D5E9E7-B5FD-458F-8CC8-8459374D2ACF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_0._99_Assessment</RootNamespace>
-    <AssemblyName>0.99_Assessment</AssemblyName>
+    <RootNamespace>_0._09_Constructors_base</RootNamespace>
+    <AssemblyName>0.09_Constructors_base</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,14 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Minor.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Assessment.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

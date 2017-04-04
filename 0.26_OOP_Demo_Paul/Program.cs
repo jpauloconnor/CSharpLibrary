@@ -72,7 +72,7 @@ namespace _0._26_OOP_Demo_Paul
                 lizard.Attack(player);
 
                 int sleepfor = 5000;
-              
+       
                 Thread.Sleep(sleepfor);
                 Console.WriteLine("****************");
 
@@ -80,6 +80,7 @@ namespace _0._26_OOP_Demo_Paul
 
                 Thread.Sleep(sleepfor);
                 Console.WriteLine("****************");
+                Console.Clear();
 
             }
 

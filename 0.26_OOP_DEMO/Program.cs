@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Speech.Synthesis;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace _0._26_OOP_DEMO

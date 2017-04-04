@@ -76,7 +76,6 @@ namespace _0._28_MathFacts
                                     Console.WriteLine("Enter y or n");
                                 }
                             }
-
                         }
                     } while (continueChoice == true);
 
