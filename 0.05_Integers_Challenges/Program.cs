@@ -10,6 +10,12 @@ namespace _0._05_Integers_Challenges
     {
         static void Main(string[] args)
         {
+
+            for (int i = 0; i < 10; i++)
+            {
+
+            }
+
         }
     }
 }

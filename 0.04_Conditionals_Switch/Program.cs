@@ -6,6 +6,17 @@ namespace _0._04_Conditionals_Switch
     {
         static void Main(string[] args)
         {
+            int age = 7;
+
+            switch (age)
+            {
+                case 7:
+                    Console.WriteLine("You are 7");
+                    break;
+                default:
+                    break;
+            }
+
             string friend = "Fred";
 
             switch (friend)

@@ -27,7 +27,7 @@ namespace _0._02_BasicTypes_Challenges
 
             /*******    Possible Answer:   ****    */
 
-            int luckyNumber;
+            int lottoNumber;
             int yearGraduatedHighSchool = 1994;
 
             string fbPost;
@@ -37,7 +37,7 @@ namespace _0._02_BasicTypes_Challenges
             bool isHappy = true;
 
             decimal studentLoanAmount;
-            decimal bankAccount = 100;  //More expensive than a double.
+            decimal bankAccount = 100.0M;  //More expensive than a double.
 
             float amountOfSnow;
             float temperature = 57.5f;
