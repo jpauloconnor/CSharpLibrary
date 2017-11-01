@@ -12,68 +12,68 @@ namespace _0._12_Collections_Lists
         static void Main(string[] args)
         {
             //Here's an example of a List
-            var conceptList = new List<string>();
+            List<string> conceptList = new List<string>
+            {
+                "Stuff"
+            };
             conceptList.Add("Types");
             conceptList.Add("Strings");
             conceptList.Add("Booleans");
             conceptList.Add("Ints");
             conceptList.Add("Floats");
             conceptList.Add("Doubles");
-            conceptList.Add("Decimals");
-            conceptList.Add("Methods");
-            conceptList.Add("Loops");
-            conceptList.Add("Public versus Private");
-            conceptList.Add("operators");
-
-
-            conceptList.Add("Keywords");
-            conceptList.Add("Loops");
-            conceptList.Add("Conditionals");
-            conceptList.Add("DateTime");
-            conceptList.Add("Classes: Abstract");
-            conceptList.Add("Classes: Sealed");
-            conceptList.Add("Classes: Inheritance");
-            conceptList.Add("Classes: Inheritance & Subclassing");
-            conceptList.Add("Classes: Inheritance & Parent Class");
-            conceptList.Add("Classes: Polymorphism & Overloading");
-            conceptList.Add("Encapsulation: Access modifiers");
-            conceptList.Add("Methods: Void");
-            conceptList.Add("Methods: Public");
-            conceptList.Add("Methods: return");
-            conceptList.Add("Classes: Properties");
-            conceptList.Add("Classes: Get & Set");
-            conceptList.Add("Classes: constructors");
-            conceptList.Add("Collections: Arrays");
-            conceptList.Add("Collections: Dictionaries");
-            conceptList.Add("Collections: Lists");
-            conceptList.Add("Enums");
-            conceptList.Add("Structs");
-            conceptList.Add("Switch Statements");
 
             foreach (var concept in conceptList)
             {
                 Console.WriteLine(concept);
             }
 
+            //Two properties that a List has:
+            // A list is a reference to an array that has extra spaces. 
+            //Notice the count property & capacity propery.
+            Console.WriteLine("Count before:", conceptList.Count);
+            Console.WriteLine("Capacity before:", conceptList.Capacity);
+
+            conceptList.Add("Decimals");
+            conceptList.Add("Methods");
+            conceptList.Add("Loops");
+            conceptList.Add("Public versus Private");
+
+
+            Console.WriteLine(conceptList[0]);
             Console.WriteLine("");
             Console.WriteLine("Example of ForEach and Lambda");
             conceptList.ForEach(concept => Console.WriteLine(concept));
-            Console.WriteLine("================");
-            List<string> names = new List<string>
+
+
+            Console.WriteLine("/******************************************************/");
+
+            //Notice the param below sets the capacity to 10.
+            List<string> names = new List<string>(10)
             {
                 "James", "Paul", "Kenn", "Jenn", "Sheriff"
             };
 
+            //Two properties that a List has:
+            // A list is a reference to an array that has extra spaces. 
+            //Notice the count property & capacity propery.
+            Console.WriteLine(names.Count);
+            Console.WriteLine(names.Capacity);
+            names.ForEach(name => Console.WriteLine(name));
+            names.Remove("James");
+
+            names.ForEach(name => Console.WriteLine(name));
             names.ForEach(name => Console.WriteLine(name));
             names.Remove("James");
             Console.WriteLine("================");
-            
             names.ForEach(name => Console.WriteLine(name));
 
 
-            Console.WriteLine(conceptList[0]);
-            Console.WriteLine(conceptList.Capacity);
+            Console.WriteLine("/******************************************************/");
+
             
+            //List<T> has a lot of the same elements as arrays.
+
 
             Console.ReadLine();
 

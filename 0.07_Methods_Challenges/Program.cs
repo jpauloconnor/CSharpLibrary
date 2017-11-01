@@ -39,11 +39,15 @@ namespace _0._07_Methods_Challenges
             thundercats.GetSuggestion();
 
             List<NetflixShow> shows = new List<NetflixShow>
-                    {
-                        new NetflixShow(){ Name = "Peaky Blinders", Rating=4, Genre="Gangster" },
-                        new NetflixShow(){ Name = "Walking Dead", Rating=4, Genre="Horror" },
-                        new NetflixShow(){ Name = "Narcos", Rating=4, Genre="Gangster" }
-                    };
+            {
+                new NetflixShow(){ Name = "Peaky Blinders", Rating=4, Genre="Gangster" },
+                new NetflixShow(){ Name = "Walking Dead", Rating=4, Genre="Horror" },
+                new NetflixShow(){ Name = "Narcos", Rating=4, Genre="Gangster" }
+            };
+
+
+            var i = 7;
+            Console.WriteLine(i);
 
             foreach (var show in shows)
             {

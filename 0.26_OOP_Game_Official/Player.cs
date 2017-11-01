@@ -123,7 +123,6 @@ namespace _0._26_OOP_Game_Official
                 default:
                     Console.WriteLine("The Sword of Smigel");
                     return this._weaponType = WeaponType.TheSwordOfSmigel;
-
             }
         }
         public string DeclareType()

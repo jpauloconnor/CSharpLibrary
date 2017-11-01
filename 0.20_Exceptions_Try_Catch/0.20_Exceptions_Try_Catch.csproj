@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{08293F63-AB35-41AC-A978-4BB1D910F8C4}</ProjectGuid>
+    <ProjectGuid>{E55E0933-AC69-4B20-B331-BB5C91C68FFB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_0._14_Override</RootNamespace>
-    <AssemblyName>0.14_Override</AssemblyName>
+    <RootNamespace>_0._20_Exceptions_Try_Catch</RootNamespace>
+    <AssemblyName>0.20_Exceptions_Try_Catch</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Employee.cs" />
-    <Compile Include="Executive.cs" />
+    <Compile Include="NumberGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SalesPerson.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

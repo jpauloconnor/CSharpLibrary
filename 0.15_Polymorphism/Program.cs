@@ -13,7 +13,6 @@ namespace _0._15_Polymorphism
         static void Main(string[] args)
         {
             //Here we set up an array of objects.
-
             Car[] cars = new Car[3];
 
             //The first one will use the default fields and default method.
@@ -28,7 +27,7 @@ namespace _0._15_Polymorphism
 
 
             //Polymorphism allows you to use derived class methods along with base class reference variables at run time.
-            //Here we're using a base class variable - car - to run all of the subclasses/derived classes methods - PrintCarName at run time.
+            //Here we're using a base class variable - car - to run all of the subclasses/derived class methods - PrintCarName at run time.
             foreach (Car car in cars)
             {
                 car.PrintCarName();

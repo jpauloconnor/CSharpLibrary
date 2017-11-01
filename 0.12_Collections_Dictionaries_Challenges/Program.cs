@@ -50,12 +50,14 @@ namespace _0._12_Collections_Dictionaries_Challenges
             foreach (KeyValuePair<string, string[]> pair in bestPictureNominees)
             {
                 Console.WriteLine("{0}: {1}, {2}", pair.Key, pair.Value[0], pair.Value[1]);
-
             }
 
 
             Console.WriteLine("                                                ");
             Console.WriteLine("                                                ");
+
+
+
 
             /*********GOLD*********/
             Console.WriteLine("Please type a year to show the movie that won: ");
@@ -76,6 +78,7 @@ namespace _0._12_Collections_Dictionaries_Challenges
                 string[] value_For_Key = bestPictureNominees[readLine];
                 string s = string.Join(", ", value_For_Key);
                 Console.WriteLine("The best nominees in " + readLine + " were " + s);
+                Console.ReadLine();
             }
         }
 

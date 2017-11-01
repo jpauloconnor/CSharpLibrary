@@ -9,25 +9,6 @@ namespace _0._09_Constructors_base
     public class Minor : Person
     {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
         public Minor(string firstName, string lastName, int age, bool isInSchool) : base(firstName, lastName, age)
         {
             this.IsInSchool = isInSchool;

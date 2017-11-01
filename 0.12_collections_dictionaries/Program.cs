@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _0._06_Objects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace _0._12_collections_dictionaries
                 Console.WriteLine("{0}, {1}", pair.Key, pair.Value);
             }
 
+            Donut donut1 = new Donut();
             Console.ReadLine();
         }
     }

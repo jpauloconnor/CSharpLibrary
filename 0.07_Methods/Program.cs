@@ -18,7 +18,7 @@ namespace _0._07_Methods
             paul.Age = 40;
             paul.GetAge();
             Console.WriteLine(paul.PostInterest("Subaru Wagon"));
-            Console.WriteLine(paul.GetCarType("Subaru"));
+            //Console.WriteLine(paul.GetCarType("Subaru"));
 
             Car newCar = new Car();
             newCar.Automatic = true;

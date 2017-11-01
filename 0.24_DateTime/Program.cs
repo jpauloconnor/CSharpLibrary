@@ -26,6 +26,11 @@ How about creating a timeline of key battles from World War II?
 
 */
 
+
+            string[] anotherDay = DateTime.Now.GetDateTimeFormats();
+            Console.WriteLine(anotherDay[0]);
+
+
             //Now is a static property.
             DateTime myValue = DateTime.Now;
 
