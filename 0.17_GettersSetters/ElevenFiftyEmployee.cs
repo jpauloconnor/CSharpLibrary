@@ -23,7 +23,7 @@ namespace _0._17_GettersSetters
         {
             set
             {
-                if (Id < 0)
+                if (value < 0)
                     throw new Exception("The Employee Id is not valid");
                 this._id = value;
             }

@@ -12,6 +12,7 @@ namespace _0._99_SpeechSynth
         static void Main(string[] args)
         {
 
+
             //Original Code from: http://www.wpf-tutorial.com/audio-video/speech-synthesis-making-wpf-talk/
 
 

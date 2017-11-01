@@ -30,23 +30,23 @@ namespace _0._25_LINQ
             //This is done after you build the class below.
             QueryEmployees();
             Console.WriteLine("  BREAK ");
-            QueryTypes();
+            //QueryTypes();
             Console.ReadLine();
         }
 
-        private static void QueryTypes()
-        {
-            IEnumerable<string> publicTypes =
-                from t in Assembly.GetExecutingAssembly().GetTypes()
-                where t.IsPublic
-                select t.FullName;
+        //private static void QueryTypes()
+        //{
+        //    IEnumerable<string> publicTypes =
+        //        from t in Assembly.GetExecutingAssembly().GetTypes()
+        //        where t.IsPublic
+        //        select t.FullName;
 
-            foreach (string name in publicTypes)
-            {
-                Console.WriteLine(name);
-            }
-            Console.ReadLine();
-        }
+        //    foreach (string name in publicTypes)
+        //    {
+        //        Console.WriteLine(name);
+        //    }
+        //    Console.ReadLine();
+        //}
 
         private static void QueryEmployees()
         {
@@ -61,12 +61,12 @@ namespace _0._25_LINQ
 
             IEnumerable<Employee> queryTwo = from e in employees
                                              where e.HireDate.Year == 2015
-                                             orderby e.Name
+                                             //orderby e.Name
                                              select e;
 
             foreach (Employee e in queryTwo)
             {
-                Console.WriteLine(e.Name);
+                Console.WriteLine("{0} was hired in 2015", e.Name);
             }
             Console.ReadLine();
         }

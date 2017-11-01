@@ -20,6 +20,7 @@ namespace _0._14_Override
             Console.WriteLine("Employee4 " + employee1.name + " earned: " + employee1.CalculatePay());
             Console.WriteLine("Employee4 " + employee2.name + " earned: " + employee2.CalculatePay());
             Console.ReadLine();
+
         }
     }
 }

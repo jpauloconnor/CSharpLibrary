@@ -15,7 +15,7 @@ namespace _0._17_GettersSetters
 
             ElevenFiftyEmployee paul = new ElevenFiftyEmployee();
             paul.Id = 10;
-            paul.Name = "Paul O'Connor";
+            paul.Name = "";
             paul.CommonWorkQuote = "Somebody's got a case of the Mondays";
             paul.CompanyName = "Eleven Fifty";
 
