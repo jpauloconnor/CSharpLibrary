@@ -157,6 +157,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0.04_Conditionals_if_else_d
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0.14_Override_ToString", "0.14_Override_ToString\0.14_Override_ToString.csproj", "{10810E14-6B47-407F-AB83-636570C16A55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0.18_Interfaces_Collections_Pseudo", "0.18_Interfaces_Collections_Pseudo\0.18_Interfaces_Collections_Pseudo.csproj", "{5F524B04-544F-4C4D-8341-5248A6D67AC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -471,6 +473,10 @@ Global
 		{10810E14-6B47-407F-AB83-636570C16A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10810E14-6B47-407F-AB83-636570C16A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10810E14-6B47-407F-AB83-636570C16A55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F524B04-544F-4C4D-8341-5248A6D67AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F524B04-544F-4C4D-8341-5248A6D67AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F524B04-544F-4C4D-8341-5248A6D67AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F524B04-544F-4C4D-8341-5248A6D67AC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

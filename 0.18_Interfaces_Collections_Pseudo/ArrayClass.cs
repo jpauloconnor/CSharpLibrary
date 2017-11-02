@@ -26,12 +26,11 @@ namespace _0._18_Interfaces_Collections_Pseudo
         public void IterateOverTheCollection()
         {
             Console.WriteLine("Iterate over the array");
-
         }
 
         public void RemoveSomeStuff()
         {
-            throw new NotImplementedException("You can't remove stuff from an array, yo.");
+            Console.WriteLine("You removed stuff from the array");
         }
     }
 }

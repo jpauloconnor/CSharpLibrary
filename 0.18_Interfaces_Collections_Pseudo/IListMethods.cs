@@ -8,7 +8,8 @@ namespace _0._18_Interfaces_Collections_Pseudo
 {
     interface IListMethods
     {
-        void RemoveSomethingAtAnIndex();
-        void AddSomeStuffToTheListButNotTheArray();
+        //These are just pseudo methods to illustrate implementation.
+        void RemoveSomeStuff();
+        void AddSomeStuff();
     }
 }

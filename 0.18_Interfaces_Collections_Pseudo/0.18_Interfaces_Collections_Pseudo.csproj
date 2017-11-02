@@ -7,7 +7,7 @@
     <ProjectGuid>{5F524B04-544F-4C4D-8341-5248A6D67AC6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_0._18_Interfaces_Collections_Pseudo</RootNamespace>
-    <AssemblyName>_0._18_Interfaces_Collections_Pseudo</AssemblyName>
+    <AssemblyName>0.18_Interfaces_Collections_Pseudo</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayClass.cs" />
+    <Compile Include="ICollect.cs" />
+    <Compile Include="IConvert.cs" />
+    <Compile Include="IEnum.cs" />
+    <Compile Include="IListMethods.cs" />
+    <Compile Include="ListClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
