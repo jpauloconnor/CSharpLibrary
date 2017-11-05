@@ -40,9 +40,17 @@ namespace _0._17_GettersSetters
         {
             set
             {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("The Employee name is not valid");
-                this._employeeName = value;
+                try
+                {
+                    this._employeeName = value;
+                }
+                catch (Exception)
+                {
+
+                    if (string.IsNullOrEmpty(value))
+                        throw new Exception("The Employee name is not valid");
+                }
+               
             }
             get
             {

@@ -12,3 +12,4 @@ namespace _0._18_Interfaces_Collections_Pseudo
         void CheckTheCapacity();
     }
 }
+

@@ -39,12 +39,10 @@ namespace _0._16_Encapsulation
             BankAccountPrivate bankAccountPrivate = new BankAccountPrivate();
             bankAccountPrivate.CustomerName = "John Paul Jones";
 
-
             BankAccountProtected bankAccountProtected = new BankAccountProtected();
             bankAccountProtected.CloseAccount();
             //Try calling any of the Protected methods on this. You can't do it.
             
-
             Console.ReadLine();
         }
     }
