@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="093f67f28b89469893d342a602c088dc" Name="Diagram1">
+        <EntityTypeShape EntityType="AtmDBContextModel.Account" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtmDBContextModel.Customer" Width="1.5" PointX="7.875" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtmDBContextModel.Deposit" Width="1.5" PointX="0.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtmDBContextModel.Transaction" Width="1.5" PointX="3.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtmDBContextModel.Withdrawl" Width="1.5" PointX="0.875" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="AtmDBContextModel.FK_dbo_Deposits_dbo_Transactions_TransactionID" ManuallyRouted="false" />
+        <AssociationConnector Association="AtmDBContextModel.FK_dbo_Withdrawls_dbo_Transactions_TransactionID" ManuallyRouted="false" />
+        <AssociationConnector Association="AtmDBContextModel.FK_Accounts_Customers" />
+        <AssociationConnector Association="AtmDBContextModel.FK_Transactions_Accounts" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
