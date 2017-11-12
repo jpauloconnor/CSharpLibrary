@@ -9,6 +9,7 @@ namespace _0._99_money_machine_console_app
     class AuthService
     {
         private AtmDBContextEntities db = new AtmDBContextEntities();
+        private CustomerService customerService = new CustomerService();
 
         public bool VerifyUser(int account, int pin)
         {
@@ -26,6 +27,7 @@ namespace _0._99_money_machine_console_app
                 else
                 {
                     Console.WriteLine("You are verified");
+                    customerService.GreetByLast(acc.AccountID);
                     return true;
                 }
             }

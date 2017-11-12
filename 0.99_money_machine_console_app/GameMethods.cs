@@ -148,6 +148,7 @@ namespace _0._99_money_machine_console_app
                 else
                 {
                     Console.WriteLine("Something went wrong");
+                    //TODO: Handle Clear....
                     ShowHome();
                 }
 

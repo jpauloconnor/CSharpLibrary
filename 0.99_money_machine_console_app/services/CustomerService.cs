@@ -42,7 +42,7 @@ namespace _0._99_money_machine_console_app
                         select n;
             foreach(var name in query)
             {
-                Console.WriteLine();
+                Console.WriteLine("Hello, {0}", name.Customer.FirstName);
             }
         }
         /// <summary>
