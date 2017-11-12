@@ -10,11 +10,18 @@ namespace _0._99_money_machine_console_app
     {
         private AtmDBContextEntities db = new AtmDBContextEntities();
 
+        AccountService accountService = new AccountService();
+        DepositService depositService = new DepositService();
+
         /*TODO: Method for withdrawl*/
         public void WithdrawlMoney() { }
 
         /*TODO: Method for Deposit*/
-        public void DepositMoney() { }
+        public int DepositTransaction(int depositEntered)
+        {
+            int deposit = depositService.DepositMoney(depositEntered);
+            return deposit;
+        }
 
         /*TODO: Method for moving stuff to another account */
         /*TODO: */
