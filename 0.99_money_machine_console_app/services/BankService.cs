@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _0._99_money_machine_console_app
 {
-    class GameMethods
+    class BankService
     {
         //Create instances of services
         public static CustomerService customerService = new CustomerService();
@@ -108,7 +108,6 @@ namespace _0._99_money_machine_console_app
             return key;
         }
         //Transaction Methods
-
         public static int GetKeyFromConsole(ConsoleKeyInfo key)
         {
             if (char.IsDigit(key.KeyChar))
@@ -119,6 +118,7 @@ namespace _0._99_money_machine_console_app
 
             return 0;
         }
+        
         //ATM Program Method(Authorized)
         public static void RunATM()
         {
@@ -137,7 +137,7 @@ namespace _0._99_money_machine_console_app
 
                     //int keyNumber;
                     int convertedKey = GetKeyFromConsole(key);
-                    
+
                     //Menu Switch
                     switch (convertedKey)
                     {
@@ -174,18 +174,15 @@ namespace _0._99_money_machine_console_app
                 Console.ReadLine();
             }
         }
+
     }
 }
 
 
-
-//TODO: Option #2 Part #2 - Create a new account for a brand new customer.
-//Console.WriteLine("Hello {0} you like to create a new account?");
-//                    var type = Console.ReadLine();
 //TODO: Option #4 - See member benefits.
 //PHASE 3 - Transactional things and other things logged in
 //Console.WriteLine("What kind of transaction would you like to make?");
-                    //TODO: Give options for return users.
+//TODO: Give options for return users.
 //var transactionChoices = Console.ReadLine();
 //Console.WriteLine("How much would you like to withdrawl?");
 //Console.WriteLine("Will you be depositing cash or checks?");

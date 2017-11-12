@@ -10,7 +10,7 @@ namespace _0._99_money_machine_console_app
     {
         static void Main(string[] args)
         {
-            GameMethods.RunATM();
+            BankService.RunATM();
         }
     }
 }
