@@ -54,7 +54,8 @@
     <Compile Include="Account.cs">
       <DependentUpon>AtmModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="AccountService.cs" />
+    <Compile Include="GameMethods.cs" />
+    <Compile Include="services\AccountService.cs" />
     <Compile Include="AtmModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -73,7 +74,8 @@
     <Compile Include="Customer.cs">
       <DependentUpon>AtmModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CustomerService.cs" />
+    <Compile Include="services\AuthService.cs" />
+    <Compile Include="services\CustomerService.cs" />
     <Compile Include="Deposit.cs">
       <DependentUpon>AtmModel.tt</DependentUpon>
     </Compile>
@@ -82,7 +84,7 @@
     <Compile Include="Transaction.cs">
       <DependentUpon>AtmModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TransactionService.cs" />
+    <Compile Include="services\TransactionService.cs" />
     <Compile Include="Withdrawl.cs">
       <DependentUpon>AtmModel.tt</DependentUpon>
     </Compile>

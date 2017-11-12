@@ -8,8 +8,13 @@ namespace _0._99_money_machine_console_app
 {
     class CustomerService
     {
-        private AtmDBContextEntity db = new AtmDBContextEntity();
+        private AtmDBContextEntities db = new AtmDBContextEntities();
         
+        /// <summary>
+        /// CreateCustomer
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="last"></param>
         public void CreateCustomer(string first, string last)
         {
             var entity = new Customer
@@ -17,7 +22,7 @@ namespace _0._99_money_machine_console_app
                 FirstName = first,
                 LastName = last
             };
-            using(var ctx = new AtmDBContextEntity())
+            using(var ctx = new AtmDBContextEntities())
             {
                 ctx.Customers.Add(entity);
                 ctx.SaveChanges();
@@ -25,6 +30,10 @@ namespace _0._99_money_machine_console_app
             Console.WriteLine("Hello, {0}. Your id number is, {1}", entity.FirstName, entity.CustomerID);
         }
 
+        /// <summary>
+        /// Greet Customer
+        /// </summary>
+        /// <param name="id"></param>
         public void GreetByLast(int? id)
         {
             //Get the id.
@@ -36,8 +45,12 @@ namespace _0._99_money_machine_console_app
                 Console.WriteLine();
             }
         }
-
-        public Customer GetId(int? id)
+        /// <summary>
+        /// GetCustomerID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Customer GetCustomerID(int? id)
         {
             Customer customerId = db.Customers.Find(id);
             if (customerId == null)
@@ -51,8 +64,7 @@ namespace _0._99_money_machine_console_app
         //Delete Customer....
         //Update Information....
         //Read Current Customer Information...
-        //Security: Secret Pin
-        //Hash Pin: https://stackoverflow.com/questions/4181198/how-to-hash-a-password
+        public void ShowCustomerInformation() { }
 
     }
 }
