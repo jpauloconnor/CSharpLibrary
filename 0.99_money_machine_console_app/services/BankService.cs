@@ -8,10 +8,11 @@ namespace _0._99_money_machine_console_app
 {
     class BankService
     {
-        //Create instances of services
+        //Create static instances of services
         public static CustomerService customerService = new CustomerService();
         public static AccountService accountService = new AccountService();
         public static AuthService authService = new AuthService();
+        public static TransactionService transactionService = new TransactionService();
 
         //Start & Login
         public static void ShowHome()
@@ -107,6 +108,7 @@ namespace _0._99_money_machine_console_app
             var key = Console.ReadKey();
             return key;
         }
+        
         //Transaction Methods
         public static int GetKeyFromConsole(ConsoleKeyInfo key)
         {
@@ -118,7 +120,11 @@ namespace _0._99_money_machine_console_app
 
             return 0;
         }
-        
+        public static int AddDeposit(int deposit) {
+            int newBalance = transactionService.DepositTransaction(deposit);    
+            return newBalance;
+        }
+
         //ATM Program Method(Authorized)
         public static void RunATM()
         {
@@ -146,7 +152,11 @@ namespace _0._99_money_machine_console_app
                             //RUN WITHDRAWL STUFF
                             break;
                         case 2:
-                            Console.WriteLine("Deposit");
+                            Console.WriteLine("How much would you like to deposit");
+                            var depositAmount = Console.ReadLine();
+                            int deposit;
+                            deposit = Int32.Parse(depositAmount);
+                            AddDeposit(deposit);
                             break;
                         case 3:
                             Console.WriteLine("Balance");

@@ -9,6 +9,7 @@ namespace _0._99_money_machine_console_app
     class AccountService
     {
         private AtmDBContextEntities db = new AtmDBContextEntities();
+        TransactionService transactionService = new TransactionService();
 
         public void CreateAccount(string type, int customerId)
         {
@@ -32,7 +33,16 @@ namespace _0._99_money_machine_console_app
             Console.WriteLine("Your id is:{0}", entity.AccountNumber);
         }
 
-      
+        public int AddDepositToBalance(int deposit, Account account)
+        {
+            int accountBalance;
+            accountBalance = account.Balance ?? default(int);
+
+            var x = transactionService.DepositTransaction(deposit);
+            int newBalance = accountBalance + x;
+
+            return newBalance;
+        }
        
         public void EditAccountName(){ }
 

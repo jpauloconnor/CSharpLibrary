@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="AtmDBContextModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="AtmDBContextModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accounts">
           <Key>
             <PropertyRef Name="AccountID" />
@@ -14,6 +14,7 @@
           <Property Name="Pin" Type="int" Nullable="false" />
           <Property Name="AccountType" Type="nvarchar" MaxLength="25" Nullable="false" />
           <Property Name="CustomerID" Type="int" Nullable="false" />
+          <Property Name="Balance" Type="int" />
         </EntityType>
         <EntityType Name="Customers">
           <Key>
@@ -123,7 +124,8 @@
             <End Role="Transactions" EntitySet="Transactions" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AtmDBContextModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -136,8 +138,9 @@
           <Property Name="Pin" Type="Int32" Nullable="false" />
           <Property Name="AccountType" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CustomerID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Customer" Relationship="AtmDBContextModel.FK_Accounts_Customers" FromRole="Account" ToRole="Customer" />
-          <NavigationProperty Name="Transactions" Relationship="AtmDBContextModel.FK_Transactions_Accounts" FromRole="Account" ToRole="Transaction" />
+          <Property Name="Balance" Type="Int32" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_Accounts_Customers" FromRole="Accounts" ToRole="Customers" />
+          <NavigationProperty Name="Transactions" Relationship="Self.FK_Transactions_Accounts" FromRole="Accounts" ToRole="Transactions" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
@@ -146,7 +149,7 @@
           <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FirstName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="LastName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Accounts" Relationship="AtmDBContextModel.FK_Accounts_Customers" FromRole="Customer" ToRole="Account" />
+          <NavigationProperty Name="Accounts" Relationship="Self.FK_Accounts_Customers" FromRole="Customers" ToRole="Accounts" />
         </EntityType>
         <EntityType Name="Deposit">
           <Key>
@@ -165,9 +168,9 @@
           <Property Name="TransactionType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="LastName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="AccountID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Account" Relationship="Self.FK_Transactions_Accounts" FromRole="Transactions" ToRole="Accounts" />
           <NavigationProperty Name="Deposits" Relationship="Self.FK_dbo_Deposits_dbo_Transactions_TransactionID" FromRole="Transactions" ToRole="Deposits" />
           <NavigationProperty Name="Withdrawls" Relationship="Self.FK_dbo_Withdrawls_dbo_Transactions_TransactionID" FromRole="Transactions" ToRole="Withdrawls" />
-          <NavigationProperty Name="Account" Relationship="AtmDBContextModel.FK_Transactions_Accounts" FromRole="Transaction" ToRole="Account" />
         </EntityType>
         <EntityType Name="Withdrawl">
           <Key>
@@ -178,6 +181,30 @@
           <Property Name="TransactionID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Transaction" Relationship="Self.FK_dbo_Withdrawls_dbo_Transactions_TransactionID" FromRole="Withdrawls" ToRole="Transactions" />
         </EntityType>
+        <Association Name="FK_Accounts_Customers">
+          <End Role="Customers" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Accounts" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="Accounts">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Transactions_Accounts">
+          <End Role="Accounts" Type="Self.Account" Multiplicity="1" />
+          <End Role="Transactions" Type="Self.Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Accounts">
+              <PropertyRef Name="AccountID" />
+            </Principal>
+            <Dependent Role="Transactions">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_dbo_Deposits_dbo_Transactions_TransactionID">
           <End Role="Transactions" Type="Self.Transaction" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -212,6 +239,14 @@
           <EntitySet Name="Deposits" EntityType="Self.Deposit" />
           <EntitySet Name="Transactions" EntityType="Self.Transaction" />
           <EntitySet Name="Withdrawls" EntityType="Self.Withdrawl" />
+          <AssociationSet Name="FK_Accounts_Customers" Association="Self.FK_Accounts_Customers">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Accounts" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transactions_Accounts" Association="Self.FK_Transactions_Accounts">
+            <End Role="Accounts" EntitySet="Accounts" />
+            <End Role="Transactions" EntitySet="Transactions" />
+          </AssociationSet>
           <AssociationSet Name="FK_dbo_Deposits_dbo_Transactions_TransactionID" Association="Self.FK_dbo_Deposits_dbo_Transactions_TransactionID">
             <End Role="Transactions" EntitySet="Transactions" />
             <End Role="Deposits" EntitySet="Deposits" />
@@ -220,39 +255,7 @@
             <End Role="Transactions" EntitySet="Transactions" />
             <End Role="Withdrawls" EntitySet="Withdrawls" />
           </AssociationSet>
-          <AssociationSet Name="FK_Accounts_Customers" Association="AtmDBContextModel.FK_Accounts_Customers">
-            <End Role="Customer" EntitySet="Customers" />
-            <End Role="Account" EntitySet="Accounts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Transactions_Accounts" Association="AtmDBContextModel.FK_Transactions_Accounts">
-            <End Role="Account" EntitySet="Accounts" />
-            <End Role="Transaction" EntitySet="Transactions" />
-          </AssociationSet>
         </EntityContainer>
-        <Association Name="FK_Accounts_Customers">
-          <End Type="AtmDBContextModel.Customer" Role="Customer" Multiplicity="1" />
-          <End Type="AtmDBContextModel.Account" Role="Account" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Customer">
-              <PropertyRef Name="CustomerID" />
-            </Principal>
-            <Dependent Role="Account">
-              <PropertyRef Name="CustomerID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Transactions_Accounts">
-          <End Type="AtmDBContextModel.Account" Role="Account" Multiplicity="1" />
-          <End Type="AtmDBContextModel.Transaction" Role="Transaction" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Account">
-              <PropertyRef Name="AccountID" />
-            </Principal>
-            <Dependent Role="Transaction">
-              <PropertyRef Name="AccountID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -267,6 +270,7 @@
                 <ScalarProperty Name="Pin" ColumnName="Pin" />
                 <ScalarProperty Name="AccountType" ColumnName="AccountType" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

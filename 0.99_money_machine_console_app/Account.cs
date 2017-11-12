@@ -25,6 +25,7 @@ namespace _0._99_money_machine_console_app
         public int Pin { get; set; }
         public string AccountType { get; set; }
         public int CustomerID { get; set; }
+        public Nullable<int> Balance { get; set; }
     
         public virtual Customer Customer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
