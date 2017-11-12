@@ -13,6 +13,7 @@ namespace _0._99_money_machine_console_app
         public static AccountService accountService = new AccountService();
         public static AuthService authService = new AuthService();
 
+        //Start & Login
         public static void ShowHome()
         {
             Console.Title = "ASCII Art";
@@ -79,26 +80,47 @@ namespace _0._99_money_machine_console_app
         }
         public static int GetAccountNumber()
         {
-            int accountNumber = accountService.RequestAccountNumber();
+            int accountNumber = authService.RequestAccountNumber();
             return accountNumber;
         }
         public static int GetPinNumber()
         {
-            int pin = accountService.RequestPinNumber();
+            int pin = authService.RequestPinNumber();
             return pin;
         }
-            //    Console.WriteLine("Please enter your pin");
-            //    string pinNumber = Console.ReadLine();
-            //    int pinNumberConverted = Int32.Parse(pinNumber);
 
-            //    accountService.LogInUser(accountNumber, pinNumberConverted);
-            //}
+        //Account Menu Methods
+        public static ConsoleKeyInfo ShowAuthorizedAccountMenu()
+        {
+            Console.Title = "ASCII Art";
 
+            string art = @"
+            Main Menu
+            Make a Withdrawl.................................1
+            Make a Deposit...................................2
+            Check Account Balance............................3
+            Request Assistance...............................4
+            Change Pin.......................................5
+            ";
+            Console.WriteLine(art);
+            Console.WriteLine("Press space bar to see the menu: ");
+            var key = Console.ReadKey();
+            return key;
+        }
+        //Transaction Methods
 
-            /// <summary>
-            /// RunATM
-            /// </summary>
-            public static void RunATM()
+        public static int GetKeyFromConsole(ConsoleKeyInfo key)
+        {
+            if (char.IsDigit(key.KeyChar))
+            {
+                int keyNumber = int.Parse(key.KeyChar.ToString()); // use Parse if it's a Digit
+                return keyNumber;
+            }
+
+            return 0;
+        }
+        //ATM Program Method(Authorized)
+        public static void RunATM()
         {
             while (true)
             {
@@ -107,43 +129,41 @@ namespace _0._99_money_machine_console_app
                 int account = GetAccountNumber();
                 int pin = GetPinNumber();
                 bool isAuthed = authService.VerifyUser(account, pin);
+
                 if (isAuthed)
                 {
-                    //PHASE #2 - Unauthenticated User options
+                    //MENU Options
+                    var key = ShowAuthorizedAccountMenu();
 
-                    //TODO: Option #1 - Swipe your card to log in to account + enter pin.
-                    Console.WriteLine("Please swipe your card?");
-                    var accountNumber = Console.ReadLine();
-                    Console.WriteLine("What is your pin?");
-                    var enteredPin = Console.ReadLine();
-                    /*TODO: LogInService - write a method that takes in a pin
-                        Check if the user already exists.
-                        If users exists and pin is correct, log them in.
-                   */
-
-                    //Option #2 - Sign up/create a new customer.
-                    Console.WriteLine("Create a new customer. First Name.");
-                    var first = Console.ReadLine();
-                    Console.WriteLine("Create a new customer. Last Name.");
-                    var last = Console.ReadLine();
-
-                    customerService.CreateCustomer(first, last);
-                    Console.WriteLine("What is your customer ID?");
-                    var customerID = Console.ReadLine();
-                    int convertedCustomerID = Int32.Parse(customerID);
-                    customerService.GetCustomerID(convertedCustomerID);
-                    accountService.CreateAccount("Checking", convertedCustomerID);
-
-                    //TODO: Option #2 Part #2 - Create a new account for a brand new customer.
-                    Console.WriteLine("Hello {0} you like to create a new account?");
-                    var type = Console.ReadLine();
-                    //TODO: Option #4 - See member benefits.
-                    //PHASE 3 - Transactional things and other things logged in
-                    Console.WriteLine("What kind of transaction would you like to make?");
-                    //TODO: Give options for return users.
-                    var transactionChoices = Console.ReadLine();
-                    Console.WriteLine("How much would you like to withdrawl?");
-                    Console.WriteLine("Will you be depositing cash or checks?");
+                    //int keyNumber;
+                    int convertedKey = GetKeyFromConsole(key);
+                    
+                    //Menu Switch
+                    switch (convertedKey)
+                    {
+                        case 1:
+                            Console.WriteLine("You pressed one");
+                            //RUN WITHDRAWL STUFF
+                            break;
+                        case 2:
+                            Console.WriteLine("Deposit");
+                            break;
+                        case 3:
+                            Console.WriteLine("Balance");
+                            break;
+                        case 4:
+                            Console.WriteLine("Assistance");
+                            break;
+                        case 5:
+                            Console.WriteLine("Change");
+                            break;
+                        default:
+                            ShowAuthorizedAccountMenu();
+                            break;
+                    }
+                    //See Balance
+                    //Withdrawl Cash
+                    //Deposit Cash
                 }
                 else
                 {
@@ -151,11 +171,21 @@ namespace _0._99_money_machine_console_app
                     //TODO: Handle Clear....
                     ShowHome();
                 }
-
-              
                 Console.ReadLine();
             }
         }
-
     }
 }
+
+
+
+//TODO: Option #2 Part #2 - Create a new account for a brand new customer.
+//Console.WriteLine("Hello {0} you like to create a new account?");
+//                    var type = Console.ReadLine();
+//TODO: Option #4 - See member benefits.
+//PHASE 3 - Transactional things and other things logged in
+//Console.WriteLine("What kind of transaction would you like to make?");
+                    //TODO: Give options for return users.
+//var transactionChoices = Console.ReadLine();
+//Console.WriteLine("How much would you like to withdrawl?");
+//Console.WriteLine("Will you be depositing cash or checks?");

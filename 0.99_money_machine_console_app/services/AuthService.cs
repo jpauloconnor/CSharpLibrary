@@ -11,6 +11,22 @@ namespace _0._99_money_machine_console_app
         private AtmDBContextEntities db = new AtmDBContextEntities();
         private CustomerService customerService = new CustomerService();
 
+        public int RequestAccountNumber()
+        {
+            Console.WriteLine("Please swipe your card or enter your unique account number: ");
+            string accountNumber = Console.ReadLine();
+            int accountNumberConverted = Int32.Parse(accountNumber);
+            return accountNumberConverted;
+        }
+
+        public int RequestPinNumber()
+        {
+            Console.WriteLine("Please enter your pin");
+            string pinNumber = Console.ReadLine();
+            int pinNumberConverted = Int32.Parse(pinNumber);
+            return pinNumberConverted;
+        }
+
         public bool VerifyUser(int account, int pin)
         {
             var query = from n in db.Accounts
@@ -26,13 +42,21 @@ namespace _0._99_money_machine_console_app
                 }
                 else
                 {
-                    Console.WriteLine("You are verified");
                     customerService.GreetByLast(acc.AccountID);
+                    Console.WriteLine("You are verified");
                     return true;
                 }
             }
             Console.WriteLine("User does not exist");
             return false;
         }
+
+        public void EditAccountPin()
+        {
+            //Already logged into account
+            //Want to change pin on Account
+
+        }
+
     }
 }

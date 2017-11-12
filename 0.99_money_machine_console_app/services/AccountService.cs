@@ -32,41 +32,8 @@ namespace _0._99_money_machine_console_app
             Console.WriteLine("Your id is:{0}", entity.AccountNumber);
         }
 
+      
        
-        public void LogInUser(int accountNum, int pin)
-        {
-            Console.WriteLine("You are now logged in");
-        }
-
-        public int RequestAccountNumber()
-        {
-            Console.WriteLine("Please swipe your card or enter your unique account number: ");
-            string accountNumber = Console.ReadLine();
-            int accountNumberConverted = Int32.Parse(accountNumber);
-            return accountNumberConverted;
-        }
-
-        public int RequestPinNumber()
-        {
-            Console.WriteLine("Please enter your pin");
-            string pinNumber = Console.ReadLine();
-            int pinNumberConverted = Int32.Parse(pinNumber);
-            return pinNumberConverted;
-        }
-
-        /// <summary>
-        /// EditAccountPin
-        /// </summary>
-        public void EditAccountPin()
-        {
-            //Already logged into account
-            //Want to change pin on Account
-            
-        }
-  
-        /// <summary>
-        /// EditAccountName
-        /// </summary>
         public void EditAccountName(){ }
 
         //TODO:List Account Balance
@@ -92,6 +59,21 @@ namespace _0._99_money_machine_console_app
 
         //Security: Secret Pin
         //Hash Pin: https://stackoverflow.com/questions/4181198/how-to-hash-a-password
+
+
+
+
+
+
+        //Withdrawl Menu
+        //$20 Quick Cash...................................1
+        //$100 Quick Cash..................................2
+
+
+        //Deposit Menu
+        //Check............................................1
+        //Cash.............................................2
+
 
 
     }
