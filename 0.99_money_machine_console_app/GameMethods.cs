@@ -142,7 +142,7 @@ namespace _0._99_money_machine_console_app
                     switch (convertedKey)
                     {
                         case 1:
-                            Console.WriteLine("You pressed one");
+                            Console.WriteLine("Withdrawl Menu");
                             //RUN WITHDRAWL STUFF
                             break;
                         case 2:
@@ -158,7 +158,7 @@ namespace _0._99_money_machine_console_app
                             Console.WriteLine("Change");
                             break;
                         default:
-                            ShowAuthorizedAccountMenu();
+                            Console.WriteLine("Broken");
                             break;
                     }
                     //See Balance
