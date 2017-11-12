@@ -14,6 +14,7 @@
           <Property Name="Pin" Type="int" Nullable="false" />
           <Property Name="AccountType" Type="nvarchar" MaxLength="25" Nullable="false" />
           <Property Name="CustomerID" Type="int" Nullable="false" />
+          <Property Name="Balance" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Customers">
           <Key>
@@ -88,18 +89,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Transactions_Accounts">
-          <End Role="Accounts" Type="Self.Accounts" Multiplicity="1" />
-          <End Role="Transactions" Type="Self.Transactions" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Accounts">
-              <PropertyRef Name="AccountID" />
-            </Principal>
-            <Dependent Role="Transactions">
-              <PropertyRef Name="AccountID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="AtmDBContextModelStoreContainer">
           <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
@@ -118,10 +107,6 @@
             <End Role="Transactions" EntitySet="Transactions" />
             <End Role="Withdrawls" EntitySet="Withdrawls" />
           </AssociationSet>
-          <AssociationSet Name="FK_Transactions_Accounts" Association="Self.FK_Transactions_Accounts">
-            <End Role="Accounts" EntitySet="Accounts" />
-            <End Role="Transactions" EntitySet="Transactions" />
-          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -138,6 +123,7 @@
           <Property Name="CustomerID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Customer" Relationship="AtmDBContextModel.FK_Accounts_Customers" FromRole="Account" ToRole="Customer" />
           <NavigationProperty Name="Transactions" Relationship="AtmDBContextModel.FK_Transactions_Accounts" FromRole="Account" ToRole="Transaction" />
+          <Property Name="Balance" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
@@ -262,6 +248,7 @@
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="AtmDBContextModel.Account">
               <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
                 <ScalarProperty Name="AccountID" ColumnName="AccountID" />
                 <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
                 <ScalarProperty Name="Pin" ColumnName="Pin" />

@@ -54,8 +54,7 @@
     <Compile Include="Account.cs">
       <DependentUpon>AtmModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="BankService.cs" />
-    <Compile Include="GameMethods.cs" />
+    <Compile Include="services\BankService.cs" />
     <Compile Include="services\AccountService.cs" />
     <Compile Include="AtmModel.Context.cs">
       <AutoGen>True</AutoGen>
