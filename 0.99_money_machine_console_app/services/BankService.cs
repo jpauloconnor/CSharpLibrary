@@ -8,6 +8,8 @@ namespace _0._99_money_machine_console_app
 {
     class BankService
     {
+        //THIS FILE TAKES CARE OF MOST OF THE ATM LOGIC AND SYNTHESIZES ALL SERVICES
+
         //Create instances of services
         public static CustomerService customerService = new CustomerService();
         public static AccountService accountService = new AccountService();
@@ -15,8 +17,8 @@ namespace _0._99_money_machine_console_app
         public static TransactionService transactionService = new TransactionService();
         public static DepositService depositService = new DepositService();
 
-
         //Start & Login
+        #region
         public static void ShowHome()
         {
             Console.Title = "ASCII Art";
@@ -91,8 +93,11 @@ namespace _0._99_money_machine_console_app
             int pin = authService.RequestPinNumber();
             return pin;
         }
+        #endregion
+
 
         //Account Menu Methods
+        #region
         public static ConsoleKeyInfo ShowAuthorizedAccountMenu()
         {
             Console.Title = "ASCII Art";
@@ -122,16 +127,17 @@ namespace _0._99_money_machine_console_app
 
             return 0;
         }
-        public static int CreateTransaction(string transType, int accountNum)
-        {
-            transactionService.CreateTransaction(transType, accountNum);
-            return accountNum;
-        }
-    
+        //public static int CreateTransaction(string transType, int accountNum)
+        //{
+        //    transactionService.CreateTransaction(transType, accountNum);
+        //    return accountNum;
+        //}
+        #endregion  
         //Deposit Methods
-        public static void DepositMoney(int depositEntered, int transId)
+        public static int DepositMoney(int depositEntered, int transId)
         {
-            depositService.DepositMoney(depositEntered, transId);
+            var totalDeposit = depositService.DepositMoney(depositEntered, transId);
+            return totalDeposit;
         }
 
 
@@ -151,20 +157,22 @@ namespace _0._99_money_machine_console_app
                 {
                     //MENU Options
                     var key = ShowAuthorizedAccountMenu();
-
-                    //int keyNumber;
                     int convertedKey = GetKeyFromConsole(key);
-                    string transType;
                     //Menu Switch
                     switch (convertedKey)
                     {
                         case 1:
                             Console.Clear();
-                            int transactionNum = CreateTransaction("Deposit", account);
+                            int transactionNum = transactionService.CreateTransaction("Deposit", account);
                             Console.WriteLine("Let's start your deposit. How much would you like to deposit?");
                             var depositString = Console.ReadLine();
                             int depositNum = Int32.Parse(depositString);
-                            DepositMoney(depositNum, transactionNum);
+                            int depositResult = DepositMoney(depositNum, transactionNum);
+                            int balance = accountService.GetBalance(account);
+                            //int totalDeposit = depositResult + balance;
+                            int newBalance = accountService.AddDepositToBalance(account, depositResult, balance);
+                            //Add deposit amount to account
+                            accountService.SaveNewBalanceToDatabase(account, newBalance);
                             break;
                         case 2:
                             Console.WriteLine("Withdrawl");
@@ -198,12 +206,3 @@ namespace _0._99_money_machine_console_app
 
     }
 }
-
-
-//TODO: Option #4 - See member benefits.
-//PHASE 3 - Transactional things and other things logged in
-//Console.WriteLine("What kind of transaction would you like to make?");
-//TODO: Give options for return users.
-//var transactionChoices = Console.ReadLine();
-//Console.WriteLine("How much would you like to withdrawl?");
-//Console.WriteLine("Will you be depositing cash or checks?");

@@ -29,10 +29,7 @@ namespace _0._99_money_machine_console_app
             return entity.TransactionID;
         }
         
-
-
-
-        public void WithdrawlMoney() { }
+       
     }
 }
 /*TODO: Method for moving stuff to another account */

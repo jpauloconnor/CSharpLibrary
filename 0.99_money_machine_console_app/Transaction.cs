@@ -17,7 +17,6 @@ namespace _0._99_money_machine_console_app
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Transaction()
         {
-            this.Deposits = new HashSet<Deposit>();
             this.Withdrawls = new HashSet<Withdrawl>();
         }
     
@@ -25,8 +24,6 @@ namespace _0._99_money_machine_console_app
         public string TransactionType { get; set; }
         public Nullable<int> AccountID { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Deposit> Deposits { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Withdrawl> Withdrawls { get; set; }
     }

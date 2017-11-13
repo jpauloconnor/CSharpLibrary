@@ -10,7 +10,7 @@ namespace _0._99_money_machine_console_app
     {
         private AtmDBContextEntities db = new AtmDBContextEntities();
 
-        public void DepositMoney(int deposit, int transId)
+        public int DepositMoney(int deposit, int transId)
         {
             var entity = new Deposit
             {
@@ -22,16 +22,20 @@ namespace _0._99_money_machine_console_app
                 ctx.Deposits.Add(entity);
                 ctx.SaveChanges();
             }
+            return entity.Amount;
+
         }
+
+
+        public void ShowDeposit() {  }
+        public void ShowAllDeposits() { }
+
     }
 }
 
 
         //TODO: add a deposit.
-        //Deposit must be a type of transaction.
-        //I want that deposit to change balance
-
-
+       
         //public int ShowDeposit(Transaction n)
         //{
         //var query = from n in db.Deposits
