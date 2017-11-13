@@ -15,8 +15,8 @@ namespace _0._99_money_machine_console_app
             //There's a problem here with Random....What?
             Random random = new Random();
             int acctNum = random.Next(1, 5000);
-            Random randomTwo = new Random();
-            int pin = randomTwo.Next(1000, 10000);
+            Random randomPin = new Random();
+            int pin = randomPin.Next(1000, 10000);
             var entity = new Account()
             {
                 AccountNumber = acctNum,
@@ -31,26 +31,18 @@ namespace _0._99_money_machine_console_app
             }
             Console.WriteLine("Your id is:{0}", entity.AccountNumber);
         }
-
-      
-       
         public void EditAccountName(){ }
-
         //TODO:List Account Balance
         public void ListAccountBalance()
         {
             Console.WriteLine("Your Account Balance is");
         }
-
         //TODO:List all Accounts by User
         public void ListAllUserAccounts() { }
-
         //TODO:Delete Account
         public void DeleteAccount() { }
-
         //TODO:Set Account Pin#
         //TODO:Deal with type of Account
-
         public int CreatePin(int account)
         {
             var pin = account;
@@ -60,21 +52,13 @@ namespace _0._99_money_machine_console_app
         //Security: Secret Pin
         //Hash Pin: https://stackoverflow.com/questions/4181198/how-to-hash-a-password
 
-
-
-
-
-
         //Withdrawl Menu
         //$20 Quick Cash...................................1
         //$100 Quick Cash..................................2
 
-
         //Deposit Menu
         //Check............................................1
         //Cash.............................................2
-
-
 
     }
 }

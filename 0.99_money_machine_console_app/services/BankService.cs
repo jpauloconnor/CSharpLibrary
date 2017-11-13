@@ -12,6 +12,9 @@ namespace _0._99_money_machine_console_app
         public static CustomerService customerService = new CustomerService();
         public static AccountService accountService = new AccountService();
         public static AuthService authService = new AuthService();
+        public static TransactionService transactionService = new TransactionService();
+        public static DepositService depositService = new DepositService();
+
 
         //Start & Login
         public static void ShowHome()
@@ -96,8 +99,8 @@ namespace _0._99_money_machine_console_app
 
             string art = @"
             Main Menu
-            Make a Withdrawl.................................1
-            Make a Deposit...................................2
+            Make a Deposit.................................1
+            Make a Withdrawl...................................2
             Check Account Balance............................3
             Request Assistance...............................4
             Change Pin.......................................5
@@ -107,6 +110,7 @@ namespace _0._99_money_machine_console_app
             var key = Console.ReadKey();
             return key;
         }
+        
         //Transaction Methods
         public static int GetKeyFromConsole(ConsoleKeyInfo key)
         {
@@ -118,7 +122,20 @@ namespace _0._99_money_machine_console_app
 
             return 0;
         }
-        
+        public static int CreateTransaction(string transType, int accountNum)
+        {
+            transactionService.CreateTransaction(transType, accountNum);
+            return accountNum;
+        }
+    
+        //Deposit Methods
+        public static void DepositMoney(int depositEntered, int transId)
+        {
+            depositService.DepositMoney(depositEntered, transId);
+        }
+
+
+        //Withdraw Methods
         //ATM Program Method(Authorized)
         public static void RunATM()
         {
@@ -137,16 +154,20 @@ namespace _0._99_money_machine_console_app
 
                     //int keyNumber;
                     int convertedKey = GetKeyFromConsole(key);
-
+                    string transType;
                     //Menu Switch
                     switch (convertedKey)
                     {
                         case 1:
-                            Console.WriteLine("Withdrawl Menu");
-                            //RUN WITHDRAWL STUFF
+                            Console.Clear();
+                            int transactionNum = CreateTransaction("Deposit", account);
+                            Console.WriteLine("Let's start your deposit. How much would you like to deposit?");
+                            var depositString = Console.ReadLine();
+                            int depositNum = Int32.Parse(depositString);
+                            DepositMoney(depositNum, transactionNum);
                             break;
                         case 2:
-                            Console.WriteLine("Deposit");
+                            Console.WriteLine("Withdrawl");
                             break;
                         case 3:
                             Console.WriteLine("Balance");

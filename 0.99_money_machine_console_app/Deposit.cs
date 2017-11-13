@@ -15,8 +15,8 @@ namespace _0._99_money_machine_console_app
     public partial class Deposit
     {
         public int DepositID { get; set; }
-        public int Amount { get; set; }
-        public int TransactionID { get; set; }
+        public Nullable<int> Amount { get; set; }
+        public Nullable<int> TransactionID { get; set; }
     
         public virtual Transaction Transaction { get; set; }
     }
