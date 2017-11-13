@@ -10,8 +10,8 @@ namespace _0._99_money_machine_console_app
     {
         private AtmDBContextEntities db = new AtmDBContextEntities();
 
-        AccountService accountService = new AccountService();
-        DepositService depositService = new DepositService();
+        private AccountService accountService = new AccountService();
+        private DepositService depositService = new DepositService();
 
         public int CreateTransaction(string transType, int accountNum)
         {

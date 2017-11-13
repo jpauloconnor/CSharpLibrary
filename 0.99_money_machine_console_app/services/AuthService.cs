@@ -18,7 +18,6 @@ namespace _0._99_money_machine_console_app
             int accountNumberConverted = Int32.Parse(accountNumber);
             return accountNumberConverted;
         }
-
         public int RequestPinNumber()
         {
             Console.WriteLine("Please enter your pin");
@@ -26,7 +25,6 @@ namespace _0._99_money_machine_console_app
             int pinNumberConverted = Int32.Parse(pinNumber);
             return pinNumberConverted;
         }
-
         public bool VerifyUser(int account, int pin)
         {
             var query = from n in db.Accounts
@@ -50,13 +48,11 @@ namespace _0._99_money_machine_console_app
             Console.WriteLine("User does not exist");
             return false;
         }
-
         public void EditAccountPin()
         {
             //Already logged into account
             //Want to change pin on Account
 
         }
-
     }
 }

@@ -11,15 +11,14 @@ namespace _0._99_money_machine_console_app
         //THIS FILE TAKES CARE OF MOST OF THE ATM LOGIC AND SYNTHESIZES ALL SERVICES
 
         //Create instances of services
-        public static CustomerService customerService = new CustomerService();
-        public static AccountService accountService = new AccountService();
-        public static AuthService authService = new AuthService();
-        public static TransactionService transactionService = new TransactionService();
-        public static DepositService depositService = new DepositService();
+        private static CustomerService customerService = new CustomerService();
+        private static AccountService accountService = new AccountService();
+        private static AuthService authService = new AuthService();
+        private static TransactionService transactionService = new TransactionService();
+        private static DepositService depositService = new DepositService();
 
         //Start & Login
-        #region
-        public static void ShowHome()
+        private static void ShowHome()
         {
             Console.Title = "ASCII Art";
 
@@ -59,7 +58,7 @@ namespace _0._99_money_machine_console_app
                 Console.Clear();
             }
         }
-        public static void GetCardAndPinMenu()
+        private static void GetCardAndPinMenu()
         {
             Console.Title = "ASCII Art";
 
@@ -83,22 +82,19 @@ namespace _0._99_money_machine_console_app
 
             Console.WriteLine(art);
         }
-        public static int GetAccountNumber()
+        private static int GetAccountNumber()
         {
             int accountNumber = authService.RequestAccountNumber();
             return accountNumber;
         }
-        public static int GetPinNumber()
+        private static int GetPinNumber()
         {
             int pin = authService.RequestPinNumber();
             return pin;
         }
-        #endregion
-
 
         //Account Menu Methods
-        #region
-        public static ConsoleKeyInfo ShowAuthorizedAccountMenu()
+        private static ConsoleKeyInfo ShowAuthorizedAccountMenu()
         {
             Console.Title = "ASCII Art";
 
@@ -117,7 +113,7 @@ namespace _0._99_money_machine_console_app
         }
         
         //Transaction Methods
-        public static int GetKeyFromConsole(ConsoleKeyInfo key)
+        private static int GetKeyFromConsole(ConsoleKeyInfo key)
         {
             if (char.IsDigit(key.KeyChar))
             {
@@ -127,21 +123,27 @@ namespace _0._99_money_machine_console_app
 
             return 0;
         }
-        //public static int CreateTransaction(string transType, int accountNum)
-        //{
-        //    transactionService.CreateTransaction(transType, accountNum);
-        //    return accountNum;
-        //}
-        #endregion  
+        
         //Deposit Methods
-        public static int DepositMoney(int depositEntered, int transId)
+        private static int DepositMoney(int depositEntered, int transId)
         {
             var totalDeposit = depositService.DepositMoney(depositEntered, transId);
             return totalDeposit;
         }
-
-
+        private static void ProcessDeposit(int account) {
+            Console.Clear();
+            int transactionNum = transactionService.CreateTransaction("Deposit", account);
+            Console.WriteLine("Let's start your deposit. How much would you like to deposit?");
+            var depositString = Console.ReadLine();
+            int depositNum = Int32.Parse(depositString);
+            int depositResult = DepositMoney(depositNum, transactionNum);
+            int balance = accountService.GetBalance(account);
+            int newBalance = accountService.AddDepositToBalance(account, depositResult, balance);
+            accountService.SaveNewBalanceToDatabase(account, newBalance);
+        }
+        
         //Withdraw Methods
+
         //ATM Program Method(Authorized)
         public static void RunATM()
         {
@@ -155,27 +157,16 @@ namespace _0._99_money_machine_console_app
 
                 if (isAuthed)
                 {
-                    //MENU Options
                     var key = ShowAuthorizedAccountMenu();
                     int convertedKey = GetKeyFromConsole(key);
                     //Menu Switch
                     switch (convertedKey)
                     {
                         case 1:
-                            Console.Clear();
-                            int transactionNum = transactionService.CreateTransaction("Deposit", account);
-                            Console.WriteLine("Let's start your deposit. How much would you like to deposit?");
-                            var depositString = Console.ReadLine();
-                            int depositNum = Int32.Parse(depositString);
-                            int depositResult = DepositMoney(depositNum, transactionNum);
-                            int balance = accountService.GetBalance(account);
-                            //int totalDeposit = depositResult + balance;
-                            int newBalance = accountService.AddDepositToBalance(account, depositResult, balance);
-                            //Add deposit amount to account
-                            accountService.SaveNewBalanceToDatabase(account, newBalance);
+                            ProcessDeposit(account);
                             break;
                         case 2:
-                            Console.WriteLine("Withdrawl");
+                            Console.WriteLine("Withdraw");
                             break;
                         case 3:
                             Console.WriteLine("Balance");
@@ -190,9 +181,6 @@ namespace _0._99_money_machine_console_app
                             Console.WriteLine("Broken");
                             break;
                     }
-                    //See Balance
-                    //Withdrawl Cash
-                    //Deposit Cash
                 }
                 else
                 {
@@ -203,6 +191,5 @@ namespace _0._99_money_machine_console_app
                 Console.ReadLine();
             }
         }
-
     }
 }

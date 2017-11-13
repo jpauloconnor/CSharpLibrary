@@ -25,8 +25,6 @@ namespace _0._99_money_machine_console_app
             return entity.Amount;
 
         }
-
-
         public void ShowDeposit() {  }
         public void ShowAllDeposits() { }
 
@@ -34,7 +32,6 @@ namespace _0._99_money_machine_console_app
 }
 
 
-        //TODO: add a deposit.
        
         //public int ShowDeposit(Transaction n)
         //{
