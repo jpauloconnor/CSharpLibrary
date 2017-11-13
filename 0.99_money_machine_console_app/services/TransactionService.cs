@@ -13,17 +13,26 @@ namespace _0._99_money_machine_console_app
         AccountService accountService = new AccountService();
         DepositService depositService = new DepositService();
 
-        /*TODO: Method for withdrawl*/
-        public void WithdrawlMoney() { }
-
-        /*TODO: Method for Deposit*/
-        public int DepositTransaction(int depositEntered)
+        public int CreateTransaction(string transType, int accountNum)
         {
-            int deposit = depositService.DepositMoney(depositEntered);
-            return deposit;
+            var entity = new Transaction
+            {
+                TransactionType = transType,
+                AccountID = accountNum
+            };
+            using (var ctx = new AtmDBContextEntities())
+            {
+                ctx.Transactions.Add(entity);
+                ctx.SaveChanges();
+            }
+            Console.WriteLine(entity.TransactionID);
+            return entity.TransactionID;
         }
+        
 
-        /*TODO: Method for moving stuff to another account */
-        /*TODO: */
+
+
+        public void WithdrawlMoney() { }
     }
 }
+/*TODO: Method for moving stuff to another account */

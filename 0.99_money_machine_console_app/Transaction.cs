@@ -23,13 +23,11 @@ namespace _0._99_money_machine_console_app
     
         public int TransactionID { get; set; }
         public string TransactionType { get; set; }
-        public string LastName { get; set; }
-        public int AccountID { get; set; }
+        public Nullable<int> AccountID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Deposit> Deposits { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Withdrawl> Withdrawls { get; set; }
-        public virtual Account Account { get; set; }
     }
 }

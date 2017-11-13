@@ -52,52 +52,52 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs">
-      <DependentUpon>AtmModel.tt</DependentUpon>
+      <DependentUpon>AtmModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AtmModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AtmModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AtmModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AtmModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AtmModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AtmModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>AtmModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Deposit.cs">
+      <DependentUpon>AtmModels.tt</DependentUpon>
     </Compile>
     <Compile Include="services\DepositService.cs" />
     <Compile Include="services\BankService.cs" />
     <Compile Include="services\AccountService.cs" />
-    <Compile Include="AtmModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AtmModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AtmModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AtmModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AtmModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AtmModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer.cs">
-      <DependentUpon>AtmModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="services\AuthService.cs" />
     <Compile Include="services\CustomerService.cs" />
-    <Compile Include="Deposit.cs">
-      <DependentUpon>AtmModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Transaction.cs">
-      <DependentUpon>AtmModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="services\TransactionService.cs" />
+    <Compile Include="Transaction.cs">
+      <DependentUpon>AtmModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="Withdrawl.cs">
-      <DependentUpon>AtmModel.tt</DependentUpon>
+      <DependentUpon>AtmModels.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="AtmModel.edmx">
+    <EntityDeploy Include="AtmModels.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AtmModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>AtmModels.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="AtmModel.edmx.diagram">
-      <DependentUpon>AtmModel.edmx</DependentUpon>
+    <None Include="AtmModels.edmx.diagram">
+      <DependentUpon>AtmModels.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -105,15 +105,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AtmModel.Context.tt">
+    <Content Include="AtmModels.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AtmModel.edmx</DependentUpon>
-      <LastGenOutput>AtmModel.Context.cs</LastGenOutput>
+      <DependentUpon>AtmModels.edmx</DependentUpon>
+      <LastGenOutput>AtmModels.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="AtmModel.tt">
+    <Content Include="AtmModels.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AtmModel.edmx</DependentUpon>
-      <LastGenOutput>AtmModel.cs</LastGenOutput>
+      <DependentUpon>AtmModels.edmx</DependentUpon>
+      <LastGenOutput>AtmModels.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

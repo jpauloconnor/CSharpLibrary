@@ -10,20 +10,21 @@ namespace _0._99_money_machine_console_app
     {
         private AtmDBContextEntities db = new AtmDBContextEntities();
 
-        //TODO: This needs to be nullable
-        public int DepositMoney(int deposit)
+        public void DepositMoney(int deposit, int transId)
         {
             var entity = new Deposit
             {
-                Amount = deposit
+                Amount = deposit,
+                TransactionID = transId
             };
             using (var ctx = new AtmDBContextEntities())
             {
                 ctx.Deposits.Add(entity);
                 ctx.SaveChanges();
             }
-            return deposit;
         }
+    }
+}
 
 
         //TODO: add a deposit.
@@ -42,5 +43,5 @@ namespace _0._99_money_machine_console_app
         //}
         //return 0;
         //}
-    }
-}
+//    }
+//}
