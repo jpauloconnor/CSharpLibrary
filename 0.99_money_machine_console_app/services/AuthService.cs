@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _0._99_money_machine_console_app
-{ 
+{
     class AuthService
     {
         private AtmDBContextEntities db = new AtmDBContextEntities();
@@ -54,5 +55,8 @@ namespace _0._99_money_machine_console_app
             //Want to change pin on Account
 
         }
+
     }
 }
+
+   

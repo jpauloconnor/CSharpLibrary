@@ -16,6 +16,8 @@ namespace _0._99_money_machine_console_app
         private static AuthService authService = new AuthService();
         private static TransactionService transactionService = new TransactionService();
         private static DepositService depositService = new DepositService();
+        private static WithdrawService withdrawService = new WithdrawService();
+
 
         //Start & Login
         private static void ShowHome()
@@ -141,8 +143,26 @@ namespace _0._99_money_machine_console_app
             int newBalance = accountService.AddDepositToBalance(account, depositResult, balance);
             accountService.SaveNewBalanceToDatabase(account, newBalance);
         }
-        
+
         //Withdraw Methods
+        private static int WithdrawMoney(int withdrawEntered, int transId)
+        {
+            var totalWithdraw = withdrawService.WithdrawMoney(withdrawEntered, transId);
+            return totalWithdraw;
+        }
+
+        private static void ProcessWithdraw(int account)
+        {
+            Console.Clear();
+            int transactionNum = transactionService.CreateTransaction("Withdraw", account);
+            var withdrawString = Console.ReadLine();
+            int withdrawNum = Int32.Parse(withdrawString);
+            int withdrawResult = WithdrawMoney(withdrawNum, transactionNum);
+            int balance = accountService.GetBalance(account);
+            int newBalance = accountService.SubtractWithdrawBalance(account, withdrawResult, balance);
+            accountService.SaveNewBalanceToDatabase(account, newBalance);
+
+        }
 
         //ATM Program Method(Authorized)
         public static void RunATM()
@@ -166,6 +186,8 @@ namespace _0._99_money_machine_console_app
                             ProcessDeposit(account);
                             break;
                         case 2:
+                            //End goal: 
+                            ProcessWithdraw(account);
                             Console.WriteLine("Withdraw");
                             break;
                         case 3:

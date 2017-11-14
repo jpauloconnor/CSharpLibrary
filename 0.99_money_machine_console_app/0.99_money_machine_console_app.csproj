@@ -75,6 +75,7 @@
     <Compile Include="Deposit.cs">
       <DependentUpon>AtmModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SecurePasswordHasher.cs" />
     <Compile Include="services\DepositService.cs" />
     <Compile Include="services\BankService.cs" />
     <Compile Include="services\AccountService.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Withdrawl.cs">
       <DependentUpon>AtmModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="services\WithdrawService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

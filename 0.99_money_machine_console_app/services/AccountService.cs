@@ -68,13 +68,27 @@ namespace _0._99_money_machine_console_app
             Console.WriteLine("Your new balance will be {0}. Does that look correct?", newBalance);
             return newBalance;
         }
+        public int SubtractWithdrawBalance(int accountNum, int withdraw, int currentBalance)
+        {
+            if (accountNum == null)
+            {
+                Console.WriteLine("Sorry, we didn't catch that number.");
+            }
+            Account account = db.Accounts.Single(accountNumber => accountNumber.AccountNumber == accountNum);
+            if (account == null)
+            {
+                Console.WriteLine("Are you sure you're sure?");
+            }
+            Console.WriteLine("Your account balance is: ${0}", account.Balance);
+            currentBalance = account.Balance;
+            int newBalance = currentBalance - withdraw;
+
+            Console.WriteLine("Your new balance will be {0}. Does that look correct?", newBalance);
+            return newBalance;
+        }
+
         public bool SaveNewBalanceToDatabase(int acctNum, int newBalance)
         {
-            //var entity = new Account()
-            //{
-            //    AccountNumber = acctNum,
-            //    Balance = newBalance
-            //};
             using (var ctx = new AtmDBContextEntities())
             {
                 var entity =
