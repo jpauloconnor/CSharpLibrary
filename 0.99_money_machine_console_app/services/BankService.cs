@@ -46,13 +46,17 @@ namespace _0._99_money_machine_console_app
                                          / _` | __| '_ ` _ \ 
                                         | (_| | |_| | | | | |
                                          \__,_|\__|_| |_| |_|
+
+
+
+
                                                              ";
             Console.WriteLine(art);
-            Console.WriteLine("Press space bar to see the menu: ");
+            Console.WriteLine("                                       Please press enter to begin        ");
             var key = Console.ReadKey();
             if (key.Key != ConsoleKey.Spacebar)
             {
-                Console.WriteLine("Please press the spacebar");
+                Console.WriteLine("                    Please press enter to begin        ");
             }
             else
             {
@@ -150,7 +154,6 @@ namespace _0._99_money_machine_console_app
             var totalWithdraw = withdrawService.WithdrawMoney(withdrawEntered, transId);
             return totalWithdraw;
         }
-
         private static void ProcessWithdraw(int account)
         {
             Console.Clear();
@@ -188,10 +191,9 @@ namespace _0._99_money_machine_console_app
                         case 2:
                             //End goal: 
                             ProcessWithdraw(account);
-                            Console.WriteLine("Withdraw");
                             break;
                         case 3:
-                            Console.WriteLine("Balance");
+                            //TODO: ShowBalance(account);
                             break;
                         case 4:
                             Console.WriteLine("Assistance");

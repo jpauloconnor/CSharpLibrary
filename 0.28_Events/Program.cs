@@ -19,7 +19,7 @@ namespace _0._28_Events
 
             //a specialized class/a function pointer
             //get data from point a to point b
-            //Based on MulticasatDelegate base class
+            //Based on MulticastDelegate base class
             //event -> delegate -> eventhandler
             //pointer - point data through the pipeline
 
