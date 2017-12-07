@@ -23,9 +23,18 @@ namespace _0._12_collections_arrays
             //Console.WriteLine(ages[2]);
 
             //To print the whole array use a foreach:
-            foreach (var age in ages.Take(2))
+            //Note that this is readonly.
+            foreach (var age in ages.Take(5))
             {
                 Console.WriteLine(age);
+            }
+
+            //Iterative over an array with a for lets it be editable...
+            string[] names = { "John", "Paul", "George", "Ringo" };
+            for(var i = 0; i < names.Length; i++)
+            {
+                names[i] = names[i].ToLower();
+                Console.WriteLine(names[i]);
             }
 
             //Arrays are strongly typed. You can't add a string to an int array and vice versa.
