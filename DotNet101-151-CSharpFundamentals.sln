@@ -175,6 +175,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0.25_LINQ_JOIN", "0.25_LINQ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0.28_Delegates", "0.28_Delegates\0.28_Delegates.csproj", "{7EEAF602-D667-4D2A-ADAE-A65D86EC85CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0.29_Identity", "0.29_Identity\0.29_Identity.csproj", "{B0C8417E-2E72-4B52-A58D-542CECEC0975}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -525,6 +527,10 @@ Global
 		{7EEAF602-D667-4D2A-ADAE-A65D86EC85CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EEAF602-D667-4D2A-ADAE-A65D86EC85CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EEAF602-D667-4D2A-ADAE-A65D86EC85CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0C8417E-2E72-4B52-A58D-542CECEC0975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C8417E-2E72-4B52-A58D-542CECEC0975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C8417E-2E72-4B52-A58D-542CECEC0975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C8417E-2E72-4B52-A58D-542CECEC0975}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
