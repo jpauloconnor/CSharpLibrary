@@ -91,7 +91,7 @@ namespace _0._28_Delegates
         // The method associated with the named delegate.
         static void DoWork(string k)
         {
-            Console.WriteLine("Some stuff: ", k);
+            Console.WriteLine(k);
         }
     }
 }
