@@ -1,0 +1,27 @@
+﻿
+
+
+Dot = 10 points
+Ghosts = 200pts for #1
+#2 400 points
+#3 800 points
+#4 1600 points
+
+Fruit
+ Cherry = 100points
+ Strawberry = 300 points
+ Orange = 500 points
+ Apple 700points
+ Melon 1000 points
+ Galaxian 2000 points
+ Bell 3000 points
+ Key 5000 points
+ 10000 points, extra life
+
+Game start
+5000 points
+3 lives
+
+Find total points
+Find total lives at the end 
+of the sequence in the txt file.
