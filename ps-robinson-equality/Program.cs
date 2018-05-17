@@ -12,6 +12,10 @@ namespace ps_robinson_equality
         static void Main(string[] args)
         {
             /*
+             Quiz 3
+             */
+            Console.WriteLine("Operator:" + AreIntsEqualOp(3, 3));
+            /*
              Quiz 2
              */
 
@@ -43,6 +47,7 @@ namespace ps_robinson_equality
             Console.WriteLine("Ref Equals #1:{0}", ReferenceEquals(prunes, apricots));
             Console.WriteLine("Ref Equals #2:{0}", ReferenceEquals(prunes, prunes));
             Console.WriteLine("Ref Equals #3:{0}", ReferenceEquals(moreApricots, apricots));
+ 
             /*
             Quiz 1
             */
@@ -96,11 +101,19 @@ namespace ps_robinson_equality
             //Console.WriteLine(banana.Equals(chocolate));
             Console.ReadLine();
         }
+
+        private static bool AreIntsEqualOp(int x, int y)
+        {
+            return x == y;
+        }
+
         //Equals is overrideable
         public override bool Equals(object obj)
         {
             return base.Equals(obj);
         }
+
+       
     }
 }
 
@@ -132,16 +145,10 @@ Value is slow - check every field or property
     2. Multiple ways to compare values
     s == S  - Equal? C# says they are not
 
-    Ignore Case?
-    Password....
 
     Equality is not an absolute
         Equality is context-sensitive
     
-    Database Records
-
-    Floating Point
-        Rule: You shouldn't use floating point for equality.
     
 
 

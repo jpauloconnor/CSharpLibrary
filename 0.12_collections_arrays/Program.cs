@@ -10,37 +10,57 @@ namespace _0._12_collections_arrays
     {
         static void Main(string[] args)
         {
-            //This is just a few basic way to add items to an array.
-            //The index starts at 0. 0, 1, 2, 3, 4
+            //--->Arrays are strongly typed. 
+            //--->ERROR: string[] names = { 4, "John", "Paul", "George", "Ringo" };
+            //---> Know the index offset
+            //Index starts at 0. 0, 1, 2, 3, 4
             int[] ages = new int[5];
             ages[0] = 37;
             ages[1] = 40;
             ages[2] = 41;
-            ages[3] = 35;
-            ages[4] = 26;
 
-            //To print one specific number:
-            //Console.WriteLine(ages[2]);
+            //----> print one specific index:
+            Console.WriteLine(ages[2]);
 
-            //To print the whole array use a foreach:
-            //Note that this is readonly.
+            //----> print the whole array use a foreach:
+            foreach (var age in ages)
+            {
+                Console.WriteLine($"Age is {age}");
+            }
+            //----> NOTE: foreach is readonly.
             foreach (var age in ages.Take(5))
             {
                 Console.WriteLine(age);
             }
 
-            //Iterative over an array with a for lets it be editable...
-            string[] names = { "John", "Paul", "George", "Ringo" };
-            for(var i = 0; i < names.Length; i++)
+            //---->Arrays cannot grow in size once initialized.
+            //A Challenge:
+            //Iterate over an array with a for loop lets it be editable...
+            Console.WriteLine("The Beatles");
+
+            string[] names = { "JOHN", "PAUL", "GEORGE", "RINGO" };
+            MoveArrayToList(names);
+
+
+            void MoveArrayToList(string[] arr)
             {
-                names[i] = names[i].ToLower();
-                Console.WriteLine(names[i]);
+                for (var i = 0; i < arr.Length; i++)
+                {
+                    string newName = arr[i].ToLower();
+                    AddNameToList(newName);
+                }
             }
 
-            //Arrays are strongly typed. You can't add a string to an int array and vice versa.
-            //Arrays cannot grow in size once initialized.
-            //Be aware of the index offest -> The array starts at 0. To access it, we need to use that access index 
-            //ages[5] = "Paul";  -> This won't work.
+            void AddNameToList(string newName)
+            {
+                List<string> insideName = new List<string>();
+                insideName.Add(newName);
+
+                foreach (var iName in insideName)
+                {
+                    Console.WriteLine(iName);
+                }
+            }
             Console.ReadLine();
         }
     }
