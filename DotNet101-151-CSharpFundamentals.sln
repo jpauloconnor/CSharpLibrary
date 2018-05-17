@@ -179,6 +179,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0.29_Identity", "0.29_Ident
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0.30_Interview_PM", "0.30_Interview_PM\0.30_Interview_PM.csproj", "{3D49A4BD-1F91-4136-9DD5-ABFDD6F49E2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ps-robinson-equality", "ps-robinson-equality\ps-robinson-equality.csproj", "{97FDC842-B1FD-4E36-B0F5-64555B403D38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -537,8 +539,15 @@ Global
 		{3D49A4BD-1F91-4136-9DD5-ABFDD6F49E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D49A4BD-1F91-4136-9DD5-ABFDD6F49E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D49A4BD-1F91-4136-9DD5-ABFDD6F49E2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97FDC842-B1FD-4E36-B0F5-64555B403D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FDC842-B1FD-4E36-B0F5-64555B403D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97FDC842-B1FD-4E36-B0F5-64555B403D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97FDC842-B1FD-4E36-B0F5-64555B403D38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92B15FC7-160C-4184-9B35-F79660461073}
 	EndGlobalSection
 EndGlobal
