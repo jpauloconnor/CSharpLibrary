@@ -17,7 +17,7 @@ namespace _0._29_Identity
 
             var result = userManager.Create(new IdentityUser("paul@paul.com"), "Test123");
             var resultTwo = userManager.FindByName("paul@paul.com");
-            var resultThree = userManager.FindByName()
+            var resultThree = userManager.FindByName("Some name");
             Console.WriteLine("Worked");
             Console.WriteLine(resultTwo);
             Console.ReadLine();

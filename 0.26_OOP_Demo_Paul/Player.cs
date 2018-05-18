@@ -250,8 +250,8 @@ namespace _0._26_OOP_Demo_Paul
             int r = rnd.Next(Attacks.Count);
             Console.WriteLine("Here I come!");
             Console.WriteLine("attacks with {0} and takes {1} damage", attackName, attackVal);
-            c.Power -= attackVal;
-            Console.WriteLine("{0} health is now at {1}", c.Name, c.Power);
+            c.CreaturePower -= attackVal;
+            Console.WriteLine("{0} health is now at {1}", c.CreatureName, c.CreaturePower);
         }
 
         public int GetPowerLevel()

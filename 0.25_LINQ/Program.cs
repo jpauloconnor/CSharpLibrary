@@ -12,19 +12,28 @@ namespace _0._25_LINQ
         static void Main(string[] args)
         {
             //Example #1 - Using Linq with an array
-            //Set up the array
+            //1 Set up the array
             string[] instructors = { "Paul", "Gavin", "Auri", "Jared" };
-            //Set up the query 
-            IEnumerable<string> query = from s in instructors
-                                        where s.Length == 5
-                                        orderby s descending
-                                        select s;
 
-            //Loop through the array using the query
+
+            //2 Set up the query 
+            IEnumerable<string> query = from i in instructors
+                                        where i.Length == 5
+                                        orderby i descending
+                                        select i;
+
+            //3 Loop through the array using the query
             foreach (string name in query)
             {
                 Console.WriteLine(name);
             }
+
+
+
+
+
+
+
 
             //Example #2 - We can use LINQ to query objects.
             //This is done after you build the class below.
