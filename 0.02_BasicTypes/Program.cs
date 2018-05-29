@@ -30,7 +30,6 @@ namespace _0._02_BasicTypes
                                     //<---useful with web services, database results
 
             //DECLARATION ONLY
-            
             int number;           //<---Type Name
             string name;
             bool IsValid;
@@ -39,14 +38,11 @@ namespace _0._02_BasicTypes
             int year = 2017;      //<---Type Name = Value
             string country = "USA";
 
-
             Console.WriteLine(s2); //<--- The Console is not just for beginners....
             Console.WriteLine("i = {0}, sh = {1}", i, sh);
             Console.WriteLine(i + sh);
 
             Console.ReadLine();    //<---Able to type in the Console Window
-
-
         }
     }
 }

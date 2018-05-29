@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9ADB0670-018E-42FC-9B44-67A3A4592375}</ProjectGuid>
+    <ProjectGuid>{1A96A158-ACDE-41F0-9FD7-D22C0D15F48D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_0._32_FileReading</RootNamespace>
-    <AssemblyName>0.32_FileReading</AssemblyName>
+    <RootNamespace>_0._25_LINQ_QuerySyntax</RootNamespace>
+    <AssemblyName>0.25_LINQ_QuerySyntax</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,18 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomFileReading.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\0.32_FileReading_Contracts\0.32_FileReading_Contracts.csproj">
-      <Project>{1d0bcbd7-a363-48c0-a769-139f1f0baed7}</Project>
-      <Name>0.32_FileReading_Contracts</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

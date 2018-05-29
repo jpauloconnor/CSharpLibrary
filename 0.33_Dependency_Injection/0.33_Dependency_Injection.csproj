@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9ADB0670-018E-42FC-9B44-67A3A4592375}</ProjectGuid>
+    <ProjectGuid>{BD882108-277F-4E46-8A63-F9592F053EFE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_0._32_FileReading</RootNamespace>
-    <AssemblyName>0.32_FileReading</AssemblyName>
+    <RootNamespace>_0._33_Dependency_Injection</RootNamespace>
+    <AssemblyName>0.33_Dependency_Injection</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,18 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomFileReading.cs" />
+    <Compile Include="Bank.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="IService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\0.32_FileReading_Contracts\0.32_FileReading_Contracts.csproj">
-      <Project>{1d0bcbd7-a363-48c0-a769-139f1f0baed7}</Project>
-      <Name>0.32_FileReading_Contracts</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,8 +12,12 @@ namespace _0._32_FileReading
         static void Main(string[] args)
         {
             string path = @"c:\temp\MyTest.txt";
+            string dirPath = @"c:\temp\";
+            CustomFileReading cf = new CustomFileReading();
+            cf.CreateFile(path);
 
-            CustomFileReading.CreateFile(path);
+            cf.CopyFile(@"c:\temp\");
+            Console.ReadLine();
         }
     }
 }
