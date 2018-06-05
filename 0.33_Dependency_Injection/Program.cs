@@ -13,8 +13,8 @@ namespace _0._33_Dependency_Injection
             Client client = new Client(new Service());
             client.Start();
 
-            Client clientToo = new Client(new Bank());
-            clientToo.Start();
+            //Client clientToo = new Client(new Bank());
+            //clientToo.Start();
 
             Console.ReadKey();
         }

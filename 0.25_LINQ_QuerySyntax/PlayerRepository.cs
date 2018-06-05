@@ -12,7 +12,6 @@ namespace _0._25_LINQ_QuerySyntax
         {
             Player foundPlayer = null;
 
-            foundPlayer = playerList.FirstOrDefault(p => p.PlayerID == playerId);
             //foreach (var p in playerList)
             //{
             //    if (p.PlayerID == playerId)
@@ -21,6 +20,12 @@ namespace _0._25_LINQ_QuerySyntax
             //        break;
             //    }
             //}
+
+            var query = from p in playerList
+                        where p.PlayerID == playerId
+                        select p;
+
+            foundPlayer = query.FirstOrDefault();
 
             return foundPlayer;
         }
