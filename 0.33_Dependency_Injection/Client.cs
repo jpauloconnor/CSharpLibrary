@@ -13,7 +13,7 @@ namespace _0._33_Dependency_Injection
 
         public void Start()
         {
-            Console.WriteLine("Service Started");
+            Console.WriteLine("Service in Client");
             this._service.Serve();
         }
     }

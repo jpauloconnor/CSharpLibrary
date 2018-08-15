@@ -3,7 +3,6 @@ BRONZE:
 Create a Dictionary that has all of the academy award winners for best picture from 2000-2005.
 Iterate over that dictionary and print it to the console.
 
-
 SILVER: 
 Create a Dictionary of Best Picture Nominees that has the year as the key and an array of movies as the values for the same years.
 Iterate over that Dictionary and print the values to the console.

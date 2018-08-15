@@ -20,7 +20,15 @@ namespace _0._12_collections_dictionaries
                 Console.WriteLine("{0}, {1}", pair.Key, pair.Value);
             }
 
-            Donut donut1 = new Donut();
+
+            Dictionary<string, Element> periodicTable = new Dictionary<string, Element>();
+            periodicTable.Add("K", new Element() { Symbol = "K", Name = "Potassium", AtomicNumber = 19 });
+            periodicTable.Add("Sr", new Element() { Symbol = "Sr", Name = "Strontium", AtomicNumber = 38 });
+
+            foreach(var e in periodicTable)
+            {
+                Console.WriteLine(e.Key + ' ' + e.Value.Name);
+            }
             Console.ReadLine();
         }
     }

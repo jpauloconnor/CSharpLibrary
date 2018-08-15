@@ -50,7 +50,7 @@ namespace _0._02_BasicTypes_Booleans
             {
                 Console.WriteLine(c + " is punctuation.");
             }
-
+            
             if (Char.IsLetter(c))
             {
                 if (Char.IsLower(c))

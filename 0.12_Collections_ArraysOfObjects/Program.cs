@@ -31,7 +31,6 @@ namespace _0._12_Collections_ArraysOfObjects
 
             foreach (var country in countries)
             {
-
                 country.GiveBasics();
             }
 

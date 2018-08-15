@@ -12,7 +12,7 @@ namespace _0._33_Dependency_Injection
 
         public void Serve()
         {
-            Console.WriteLine("We can take that out of your savings");
+            Console.WriteLine("The bank can take that out of your savings");
         }
     }
 }

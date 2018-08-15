@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{44EC33A1-9FAB-4B21-B3D8-0CFE44011969}</ProjectGuid>
+    <ProjectGuid>{66E0F354-D9F5-40D2-9B85-92797D36BDB8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_0._12_collections_dictionaries</RootNamespace>
-    <AssemblyName>0.12_collections_dictionaries</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <RootNamespace>_0._12_Collections_ArrayList</RootNamespace>
+    <AssemblyName>0.12_Collections_ArrayList</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -42,18 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Element.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\0.06_Objects\0.06_Objects.csproj">
-      <Project>{3DF3B7F2-727A-4A12-987F-B370E714A526}</Project>
-      <Name>0.06_Objects</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
