@@ -48,11 +48,8 @@ namespace _0._32_FileReading
             }
         }
 
-
-
         public void CopyFile(string path)
         {
-
             string sourceDir = @"c:\temp\"; ;
             string backupDir = @"c:\temp\copy";
 
@@ -62,7 +59,6 @@ namespace _0._32_FileReading
 
                 foreach (string f in txtList)
                 {
-
                     string fName = f.Substring(sourceDir.Length + 1);
 
                     try
@@ -93,4 +89,3 @@ namespace _0._32_FileReading
         }
     }
 }
-
