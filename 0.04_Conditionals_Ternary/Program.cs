@@ -12,12 +12,13 @@ namespace _0._04_Conditionals_Ternary
             else
                 Console.WriteLine("The number is not 7");
 
-            //Same as this:
+            // Same thing below, except colon separates the conditions
+                            // if true              do this                     else do this
             string response = ((number == 7) ? "hey, The number is 7, yo" : "The number is not 7, yo");
+           
             Console.WriteLine(response);
 
             Console.ReadLine();
-
         }
     }
 }
