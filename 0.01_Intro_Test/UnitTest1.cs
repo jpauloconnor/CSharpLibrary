@@ -19,7 +19,6 @@ namespace _0._01_Intro_Test
 
             //-- Assert
             Assert.AreEqual(test, actual);
-
         }
     }
 }
