@@ -26,6 +26,7 @@ namespace _0._02_BasicTypes
             float f = 10.8f;      //<---floating point integer, must put f *explicit* conversion afterwards
                                   //<---if using a constant, or you could cast as (float)
             decimal dd = 7.80m;   //<---must add the m if using a constant, or you could cast as (decimal)
+                                  //<---Microsoft randomly picked the m. No real reason.
             int? ni = null;       //<---nullable variables, use .HasValue to determine if they are populated, 
                                     //<---useful with web services, database results
 
