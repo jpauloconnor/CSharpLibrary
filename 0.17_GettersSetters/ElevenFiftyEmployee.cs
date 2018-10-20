@@ -17,20 +17,17 @@ namespace _0._17_GettersSetters
         private string _company;
 
         //Dealing with the Id problem. Without the getter and setter, it can be negative.
-
-
         public int Id
         {
+            get => _id;
+
             set
             {
                 if (value < 0)
                     throw new Exception("The Employee Id is not valid");
                 this._id = value;
             }
-            get
-            {
-                return this._id;
-            }
+ 
         }
 
 
@@ -38,6 +35,8 @@ namespace _0._17_GettersSetters
 
         public string Name
         {
+            get => _employeeName;
+          
             set
             {
                 try
@@ -46,34 +45,24 @@ namespace _0._17_GettersSetters
                 }
                 catch (Exception)
                 {
-
                     if (string.IsNullOrEmpty(value))
                         throw new Exception("The Employee name is not valid");
                 }
-               
-            }
-            get
-            {
-                return this._employeeName;
             }
         }
 
-
-
         public void SetCommonWorkQuote(string quote)
         {
-            this._commonWorkQuote = quote;
+            _commonWorkQuote = quote;
         }
 
         public string GetQuote()
         {
-            return this._commonWorkQuote;
+            return _commonWorkQuote;
         }
 
         //Use this if you don't have conditions to deal with.
         public string CommonWorkQuote { get; set; }
         public string CompanyName { get; set; }
-
-
     }
 }
