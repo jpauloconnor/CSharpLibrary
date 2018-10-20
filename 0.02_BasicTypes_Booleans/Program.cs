@@ -10,15 +10,11 @@ namespace _0._02_BasicTypes_Booleans
     {
         static void Main(string[] args)
         {
-
-            //Somewhat from the Docs: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool
-
             bool b = true;
-            // WriteLine automatically converts the value of b to text.
-            Console.WriteLine(b);
+            
+            Console.WriteLine(b); //<-- WriteLine automatically converts the value of b to text.
 
-            //This will grab the number out of 365
-            int currentDay = DateTime.Now.DayOfYear;
+            int currentDay = DateTime.Now.DayOfYear;//<--- This will grab the number out of 365
             Console.WriteLine(currentDay);
 
             // Assign the result of a boolean expression to b.
@@ -35,8 +31,7 @@ namespace _0._02_BasicTypes_Booleans
             }
 
 
-            //This gets into prebuilt methods that return booleans.
-
+            //Some prebuilt methods that return booleans.
             Console.Write("Enter a character: ");
             char c = (char)Console.Read();
 
